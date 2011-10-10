@@ -14,7 +14,9 @@ class CraftCalculator
       item["ingredients"].each do |ingredient_name, ingredient_count|
         price += unit_price(ingredient_name) * ingredient_count
       end
-      price = price / item["count"]
+      if item["count"]
+        price = price / item["count"]
+      end
       if item["fixed_price"] && item["fixed_price"] < price
         price = item["fixed_price"]
       end
