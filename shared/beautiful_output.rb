@@ -13,3 +13,7 @@ def report(title, &block)
   announce "%.4fs" % time.real
   puts "\n"
 end
+
+def format_number(number)
+  number.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1,")
+end

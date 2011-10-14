@@ -1,52 +1,84 @@
-class CraftCalculator
-  require 'yaml'
-  attr_accessor :data
+module AtlanticaOnline
+  module CraftCalculator
+    class Item
+      def self.load_data_from_yaml(data_file = File.join(File.dirname(__FILE__), 'data.yml'))
+        require 'yaml'
 
-  def initialize(data_file = File.join(File.dirname(__FILE__), 'data.yml'))
-    @data = YAML::load(File.open(data_file))
-  end
+        yaml_data = YAML::load(File.open(data_file))
 
-  def unit_price(item_name, count = 1)
-    item = load_item(item_name)
+        self.all = yaml_data
+      end
 
-    if item["ingredients"]
-      price = 0
-      item["ingredients"].each do |ingredient_name, ingredient_count|
-        price += unit_price(ingredient_name) * ingredient_count
+      def self.all=(hash)
+        @@all = {}
+
+        hash.each do |item_name, item_data|
+          @@all[item_name] = new(item_data.merge({ "name" => item_name}))
+        end
       end
-      if item["count"]
-        price = price / item["count"]
+
+      def self.all
+        @@all || {}
       end
-      if item["fixed_price"] && item["fixed_price"] < price
-        price = item["fixed_price"]
+
+      def self.find(item_name)
+        item = all[item_name]
+
+        raise InvalidItem, "No item '#{item_name}' found" unless item
+
+        return item
       end
-    else
-      price = item["fixed_price"] || item["market_price"]
+
+      def self.items
+        all.values
+      end
+
+      def initialize(hash)
+        @data = hash
+      end
+
+      [
+        :name,
+        :ingredients,
+        :market_price,
+        :fixed_price,
+      ].each do |method_name|
+        define_method method_name do
+          @data[method_name.to_s]
+        end
+      end
+
+      def count
+        @data["count"] || 1
+      end
+
+      def craftable?
+        !ingredients.nil?
+      end
+
+      def direct_price
+        fixed_price || market_price
+      end
+
+      def unit_price
+        if craftable?
+          result = 0
+          ingredients.each do |ingredient_name, ingredient_count|
+            result += self.class.find(ingredient_name).unit_price * ingredient_count
+          end
+          result = result / count
+          if direct_price && direct_price < result
+            result = direct_price
+          end
+        else
+          result = direct_price
+        end
+
+        return result
+      end
     end
 
-    return price
-  end
-
-  def item_names
-    data.keys
-  end
-
-  private
-
-  def load_item(item_name)
-    item = data[item_name]
-
-    raise InvalidItem, "No item '#{item_name}' found" unless item
-
-    return item
-  end
-end
-
-class InvalidItem < RuntimeError
-end
-
-class GoldFormatter
-  def self.format(number)
-    number.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1,")
+    class InvalidItem < RuntimeError
+    end
   end
 end

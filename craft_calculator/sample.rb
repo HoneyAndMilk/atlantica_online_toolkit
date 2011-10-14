@@ -1,10 +1,10 @@
 require File.join(File.dirname(__FILE__), 'lib/craft_calculator')
 require File.join(File.dirname(__FILE__), '../shared/beautiful_output')
 
-calculator = CraftCalculator.new
+AtlanticaOnline::CraftCalculator::Item.load_data_from_yaml
 
 report "Print prices (calculated, fixed or assumed market prices) for all items" do
-  calculator.item_names.sort.each do |item_name|
-    puts "#{item_name}: #{GoldFormatter.format(calculator.unit_price(item_name))}"
+  AtlanticaOnline::CraftCalculator::Item.items.sort_by { |i| i.name }.each do |item|
+    puts "#{item.name}: #{format_number(item.unit_price)}"
   end
 end
