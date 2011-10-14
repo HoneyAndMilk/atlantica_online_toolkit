@@ -8,3 +8,15 @@ report "Print prices (calculated, fixed or assumed market prices) for all items"
     puts "#{item.name}: #{format_number(item.unit_price)}"
   end
 end
+
+report "Print workload for all craftable items" do
+  AtlanticaOnline::CraftCalculator::Item.items.select{ |i| i.craftable? }.sort_by { |i| i.name }.each do |item|
+    puts "#{item.name}: #{format_number(item.workload)}"
+  end
+end
+
+report "Print skill and skill level for all craftable items" do
+  AtlanticaOnline::CraftCalculator::Item.items.select{ |i| i.craftable? }.sort_by { |i| i.name }.each do |item|
+    puts "#{item.name}: #{item.skill} #{item.skill_lvl}"
+  end
+end

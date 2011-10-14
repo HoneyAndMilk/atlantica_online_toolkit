@@ -40,6 +40,9 @@ module AtlanticaOnline
       [
         :name,
         :ingredients,
+        :workload,
+        :skill,
+        :skill_lvl,
         :market_price,
         :fixed_price,
       ].each do |method_name|
