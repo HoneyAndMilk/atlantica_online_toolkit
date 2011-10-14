@@ -1,3 +1,4 @@
+# Action
 "Action: Auto-Craft [I]":
   ingredients:
     "Multi-Hued Crystal Shard": 5
@@ -25,124 +26,51 @@
     "Auto Fishing Doll MK-2": 3
   count: 4
 
-"Adamantinum":
-  market_price: 100000
+# Armor
 
-"Adamantinum Fishing Rod":
-  ingredients:
-    "Adamantinum": 2
-    "Gold Ingot": 20
-    "Sturdy Fishing Line": 20
-    "Sturdy Fishhook": 40
-    "Earth Element": 2
-  count: 10
+# Arrow
 
-"Adamantinum Ingot":
-  ingredients:
-    "Adamantinum": 4
-    "Gold Ingot": 80
-    "Oil": 100
-  count: 2
+# Axe
 
-"Albert's Fishing Tackle":
-  market_price: 800000
+# Book
 
-"Alchemist's Stone":
-  ingredients:
-    "Mysterious Vial: Death": 10
-    "Mysterious Vial: Wisdom": 10
-    "Mysterious Vial: Valor": 10
-    "Earth Element": 50
-    "Sea Element": 20
-    "Flame Element": 10
-    "Storm Element": 5
+# Bow
 
-"Antidote [III]":
-  ingredients:
-    "Green Mold": 15
-    "Ginseng": 20
-    "Chrysanthemum": 15
-  count: 5
+# Building
+
+# Bullet
+
+# Cannon
+
+# Cannonball
+
+# Charm
+
+# Crystal
 
 "Ashen Crystal":
   fixed_price: 8000
 
-"Ashen Jewel":
+"Giant Crystal":
+  fixed_price: 80000
+
+"Redemption Crystal":
+  fixed_price: 80000
+
+"Phoenix Crystal":
+  fixed_price: 80000
+
+"Dragon Crystal":
+  fixed_price: 350000
+
+"Multi-Hued Crystal Shard":
   ingredients:
-    "Ashen Crystal": 60
-    "Energy of Atmosphere": 10
-    "Earth Element Shard": 100
+    "Phoenix Crystal": 1
+    "Giant Crystal": 1
+    "Redemption Crystal": 1
+    "Dragon Crystal": 1
+    "Ashen Crystal": 1
   count: 5
-
-"Atlantis Silver Coin":
-  market_price: 290000
-
-"Auto Fishing Doll MK-2":
-  ingredients:
-    "Albert's Fishing Tackle": 1
-    "Mysterious Vial: Wisdom": 6
-    "Flame Element Shard": 100
-    "Small Lever": 20
-    "Fusing Agent": 10
-    "Platinum Ingot": 10
-    "Oil": 50
-    "Small Bolt": 50
-  count: 5
-
-"Bamboo Fishing Rod":
-  ingredients:
-    "Pine": 120
-    "Thin Fishing Line": 5
-    "Thin Fishhook": 10
-    "Earth Element Shard": 100
-  count: 10
-
-
-"Barley":
-  fixed_price: 100
-
-"Beef":
-  fixed_price: 300
-
-"Best Bait":
-  ingredients:
-    "Carp": 250
-    "Beef": 250
-    "Sesame Oil": 50
-  count: 100
-
-"Blue Sapphire":
-  market_price: 65000
-
-"Broken Animal Bones":
-  fixed_price: 300
-
-"Carp":
-  fixed_price: 300
-
-"Chrysanthemum":
-  fixed_price: 300
-
-"Coral":
-  fixed_price: 100
-
-"Craftsman's Soul":
-  fixed_price: 300000
-
-"Crude Bait":
-  ingredients:
-    "Cucumber": 150
-    "Barley": 100
-    "Potato": 150
-  count: 100
-
-"Crystal of Anguish":
-  ingredients:
-    "Multi-Hued Crystal Shard": 3
-    "Crystal of Knowledge": 3
-    "Crystal of Wisdom": 3
-    "Mysterious Vial: Wisdom": 1
-  count: 10
 
 "Crystal of Knowledge":
   ingredients:
@@ -156,20 +84,38 @@
     "Mysterious Vial: Wisdom": 1
   count: 10
 
-"Cucumber":
-  fixed_price: 100
+"Crystal of Anguish":
+  ingredients:
+    "Multi-Hued Crystal Shard": 3
+    "Crystal of Knowledge": 3
+    "Crystal of Wisdom": 3
+    "Mysterious Vial: Wisdom": 1
+  count: 10
 
-"Cyclamen":
-  fixed_price: 1000
+"Multi-Hued Crystal":
+  ingredients:
+    "Multi-Hued Crystal Shard": 5
+    "Mandragora": 2
+    "Platinum Ingot": 25
+    "Coral":  100
+    "Opal": 3
+  count: 5
 
-"Depraved Seed":
-  market_price: 8400000
+"Ashen Jewel":
+  ingredients:
+    "Ashen Crystal": 60
+    "Energy of Atmosphere": 10
+    "Earth Element Shard": 100
+  count: 5
 
-"Dogwood Fruit":
-  fixed_price: 100
-
-"Dragon Crystal":
-  fixed_price: 350000
+"Multi-Hued Jewel Shard":
+  ingredients:
+    "Phoenix Jewel": 1
+    "Giant Jewel": 1
+    "Redemption Jewel": 1
+    "Dragon Jewel": 1
+    "Ashen Jewel": 1
+  count: 5
 
 "Dragon Jewel":
   ingredients:
@@ -178,83 +124,19 @@
     "Sea Element Shard": 40
   count: 2
 
-"Dragon Soul Crystal":
+"Phoenix Jewel":
   ingredients:
-    "Dragon Jewel": 20
-    "Hero's Blood": 5
-    "Energy of Wind": 20
-    "Sea Element": 20
-    "Mysterious Vial: Death": 2
-  count: 10
+    "Phoenix Crystal": 20
+    "Energy of Atmosphere": 4
+    "Flame Element Shard": 40
+  count: 2
 
-"Dragon Soul Jewel":
+"Redemption Jewel":
   ingredients:
-    "Dragon Soul Crystal": 10
-    "Hero's Blood": 15
-    "Energy of Hail": 15
-    "Sea Element": 50
-    "Mysterious Vial: Death": 5
-  count: 5
-
-"Earth Element":
-  fixed_price: 33000
-
-"Earth Element Shard":
-  fixed_price: 100
-
-"Enchant Stone [I]":
-  fixed_price: 1000
-
-"Enchant Stone [II]":
-  fixed_price: 15000
-
-"Enchant Stone [III]":
-  fixed_price: 50000
-
-"Enchant Stone [IV]":
-  market_price: 600000
-
-"Enchant Stone [V]":
-  market_price: 530000
-
-"Energy of Atmosphere":
-  fixed_price: 10000
-
-"Energy of Hail":
-  fixed_price: 40000
-
-"Energy of Wind":
-  fixed_price: 20000
-
-"Evil Imprint":
-  market_price: 5000000
-
-"Evil Power Saw":
-  ingredients:
-    "Evil Imprint": 15
-    "Vindictive Soul Imprint": 150
-    "Storm Element": 250
-    "Atlantis Silver Coin": 10
-    "Craftsman's Soul": 100
-    "Imitation Oriharukon": 3
-    "Alchemist's Stone": 1
-    "Monster Egg": 600
-    "Evil Soul Extract": 500
-
-"Evil Soul Extract":
-  fixed_price: 200000
-
-"Flame Element":
-  fixed_price: 250000
-
-"Flame Element Shard":
-  fixed_price: 4500
-
-"Fusing Agent":
-  fixed_price: 2000
-
-"Giant Crystal":
-  fixed_price: 80000
+    "Redemption Crystal": 40
+    "Energy of Wind": 5
+    "Storm Element Shard": 10
+  count: 2
 
 "Giant Jewel":
   ingredients:
@@ -262,6 +144,16 @@
     "Energy of Wind": 10
     "Earth Element": 8
   count: 2
+
+"Multi-Hued Jewel":
+  ingredients:
+    "Multi-Hued Jewel Shard": 5
+    "Mysterious Vial: Wisdom": 1
+    "Mysterious Vial: Death": 1
+    "Mysterious Vial: Valor": 1
+    "Mandragora": 3
+    "Energy of Hail": 8
+  count: 5
 
 "Giant Soul Crystal":
   ingredients:
@@ -281,17 +173,319 @@
     "Mysterious Vial: Valor": 5
   count: 5
 
+"Phoenix Soul Crystal":
+  ingredients:
+    "Phoenix Jewel": 20
+    "Hero's Blood": 5
+    "Energy of Wind": 20
+    "Sea Element": 20
+    "Mysterious Vial: Wisdom": 2
+  count: 10
+
+"Phoenix Soul Jewel":
+  ingredients:
+    "Phoenix Soul Crystal": 10
+    "Hero's Blood": 15
+    "Energy of Hail": 15
+    "Sea Element": 50
+    "Mysterious Vial: Wisdom": 5
+  count: 5
+
+"Redemption Soul Crystal":
+  ingredients:
+    "Redemption Jewel": 20
+    "Hero's Blood": 5
+    "Energy of Wind": 20
+    "Sea Element": 20
+    "Mysterious Vial: Wisdom": 2
+  count: 10
+
+"Redemption Soul Jewel":
+  ingredients:
+    "Redemption Soul Crystal": 10
+    "Hero's Blood": 15
+    "Energy of Hail": 15
+    "Sea Element": 50
+    "Mysterious Vial: Wisdom": 5
+  count: 5
+
+"Dragon Soul Crystal":
+  ingredients:
+    "Dragon Jewel": 20
+    "Hero's Blood": 5
+    "Energy of Wind": 20
+    "Sea Element": 20
+    "Mysterious Vial: Death": 2
+  count: 10
+
+"Dragon Soul Jewel":
+  ingredients:
+    "Dragon Soul Crystal": 10
+    "Hero's Blood": 15
+    "Energy of Hail": 15
+    "Sea Element": 50
+    "Mysterious Vial: Death": 5
+  count: 5
+
+"Multi-Hued Soul Crystal":
+  ingredients:
+    "Multi-Hued Jewel": 20
+    "Heavenly Crystal": 4
+    "Phoenix's Feather": 2
+    "Depraved Seed": 2
+    "Mysterious Vial: Death": 6
+  count: 10
+
+"Multi-Hued Soul Jewel":
+  ingredients:
+    "Multi-Hued Soul Crystal": 10
+    "Heavenly Crystal": 3
+    "Phoenix's Feather": 1
+    "Depraved Seed": 1
+    "Mysterious Vial: Death": 3
+  count: 5
+
+# Element
+
+"Earth Element Shard":
+  fixed_price: 100
+
+"Sea Element Shard":
+  fixed_price: 1000
+
+"Flame Element Shard":
+  fixed_price: 4500
+
+"Storm Element Shard":
+  fixed_price: 11000
+
+"Earth Element":
+  fixed_price: 33000
+
+"Sea Element":
+  fixed_price: 110000
+
+"Flame Element":
+  fixed_price: 250000
+
+"Storm Element":
+  fixed_price: 750000
+
+# Energy
+
+"Energy of Atmosphere":
+  fixed_price: 10000
+
+"Energy of Wind":
+  fixed_price: 20000
+
+"Energy of Hail":
+  fixed_price: 40000
+
+# Fabric
+
+"Thread":
+  fixed_price: 100
+
+"Silver Thread":
+  fixed_price: 1000
+
+# Fishing
+
+"Thin Fishing Line":
+  ingredients:
+    "Thread": 600
+    "Glue": 10
+  count: 20
+
+"Thin Fishhook":
+  ingredients:
+    "Silver Ingot": 15
+    "Broken Animal Bones": 100
+  count: 20
+
+"Bamboo Fishing Rod":
+  ingredients:
+    "Pine": 120
+    "Thin Fishing Line": 5
+    "Thin Fishhook": 10
+    "Earth Element Shard": 100
+  count: 10
+
+"Spoiled Bait":
+  ingredients:
+    "Barley": 25
+    "Mushroom": 10
+    "Cucumber": 25
+  count: 100
+
+"Maple Fishing Rod":
+  ingredients:
+    "Maple": 700
+    "Thin Fishing Line": 40
+    "Thin Fishhook": 40
+    "Sea Element Shard": 100
+  count: 10
+
+"Crude Bait":
+  ingredients:
+    "Cucumber": 150
+    "Barley": 100
+    "Potato": 150
+  count: 100
+
+"Sturdy Fishing Line":
+  ingredients:
+    "Silver Thread": 350
+    "Glue": 10
+  count: 20
+
+"Sturdy Fishhook":
+  ingredients:
+    "Platinum Ingot": 3
+    "Thick Animal Bone": 100
+  count: 20
+
+"Adamantinum Fishing Rod":
+  ingredients:
+    "Adamantinum": 2
+    "Gold Ingot": 20
+    "Sturdy Fishing Line": 20
+    "Sturdy Fishhook": 40
+    "Earth Element": 2
+  count: 10
+
+"Best Bait":
+  ingredients:
+    "Carp": 250
+    "Beef": 250
+    "Sesame Oil": 50
+  count: 100
+
+# Food
+
+"Mushroom":
+  fixed_price: 200
+
+"Barley":
+  fixed_price: 100
+
+"Potato":
+  fixed_price: 100
+
+"Cucumber":
+  fixed_price: 100
+
+"Beef":
+  fixed_price: 300
+
+"Sesame Oil":
+  fixed_price: 500
+
+"Carp":
+  fixed_price: 300
+
+"Monster Egg":
+  fixed_price: 10000
+
+# Gauntlet
+
+# Guardian
+
+# Gun
+
+# Helmet
+
+# Instrument
+
+# License
+
+# Machine
+
+"Auto Fishing Doll MK-2":
+  ingredients:
+    "Albert's Fishing Tackle": 1
+    "Mysterious Vial: Wisdom": 6
+    "Flame Element Shard": 100
+    "Small Lever": 20
+    "Fusing Agent": 10
+    "Platinum Ingot": 10
+    "Oil": 50
+    "Small Bolt": 50
+  count: 5
+
+# Mana Stone
+
+"Enchant Stone [I]":
+  fixed_price: 1000
+
+"Enchant Stone [II]":
+  fixed_price: 15000
+
+"Enchant Stone [III]":
+  fixed_price: 50000
+
+"Enchant Stone [IV]":
+  market_price: 600000
+
+"Enchant Stone [V]":
+  market_price: 530000
+
+# Medicine
+
 "Ginseng":
   fixed_price: 100
 
-"Glue":
-  fixed_price: 500
-
-"Gold Ingot":
-  fixed_price: 2000
+"Dogwood Fruit":
+  fixed_price: 100
 
 "Green Mold":
   fixed_price: 200
+
+"Chrysanthemum":
+  fixed_price: 300
+
+"Jasmine":
+  fixed_price: 300
+
+"Cyclamen":
+  fixed_price: 1000
+
+"Mandragora":
+  market_price: 500000
+
+"Revival Plant":
+  fixed_price: 20000
+
+"Healing Potion [III]":
+  ingredients:
+    "Green Mold": 10
+    "Ginseng": 30
+    "Chrysanthemum": 20
+  count: 10
+
+"Mana Potion [III]":
+  ingredients:
+    "Chrysanthemum": 15
+    "Jasmine": 15
+    "Cyclamen": 10
+  count: 10
+
+"Antidote [III]":
+  ingredients:
+    "Green Mold": 15
+    "Ginseng": 20
+    "Chrysanthemum": 15
+  count: 5
+
+"Life Potion [III]":
+  fixed_price: 8000
+  ingredients:
+    "Ginseng": 12
+    "Dogwood Fruit": 8
+    "Chrysanthemum": 10
+    "Jasmine": 10
+  count: 10
 
 "Growth Vial [II]":
   fixed_price: 30000
@@ -320,163 +514,6 @@
     "Evil Soul Extract": 3
   count: 10
 
-"Hammer [I]":
-  fixed_price: 100
-
-"Hammer [II]":
-  fixed_price: 1500
-
-"Hammer [III]":
-  fixed_price: 3000
-
-"Hammer [IV]":
-  fixed_price: 30000
-
-"Hammer [V]":
-  fixed_price: 100000
-
-"Healing Potion [III]":
-  ingredients:
-    "Green Mold": 10
-    "Ginseng": 30
-    "Chrysanthemum": 20
-  count: 10
-
-"Heavenly Crystal":
-  market_price: 5500000
-
-"Hero's Blood":
-  fixed_price: 400000
-
-"Imitation Oriharukon":
-  ingredients:
-    "Platinum Ingot": 210
-    "Pearl": 200
-    "Gold Ingot": 200
-    "Silver Ingot": 200
-    "Opal": 125
-    "Adamantinum Ingot": 20
-    "Large Diamond": 1
-    "Tanzanite": 50
-    "Ruby": 20
-    "Blue Sapphire": 25
-    "Multi-Hued Jewel": 1
-  count: 2
-
-"Iron Sand":
-  fixed_price: 200
-
-"Jasmine":
-  fixed_price: 300
-
-"Large Diamond":
-  ingredients:
-    "Opal": 100
-    "Iron Sand": 10
-
-"Life Potion [III]":
-  fixed_price: 8000
-  ingredients:
-    "Ginseng": 12
-    "Dogwood Fruit": 8
-    "Chrysanthemum": 10
-    "Jasmine": 10
-  count: 10
-
-"Mana Potion [III]":
-  ingredients:
-    "Chrysanthemum": 15
-    "Jasmine": 15
-    "Cyclamen": 10
-  count: 10
-
-"Mandragora":
-  market_price: 500000
-
-"Maple":
-  market_price: 100
-
-"Maple Fishing Rod":
-  ingredients:
-    "Maple": 700
-    "Thin Fishing Line": 40
-    "Thin Fishhook": 40
-    "Sea Element Shard": 100
-  count: 10
-
-"Monster Egg":
-  fixed_price: 10000
-
-"Multi-Hued Crystal":
-  ingredients:
-    "Multi-Hued Crystal Shard": 5
-    "Mandragora": 2
-    "Platinum Ingot": 25
-    "Coral":  100
-    "Opal": 3
-  count: 5
-
-"Multi-Hued Crystal Shard":
-  ingredients:
-    "Phoenix Crystal": 1
-    "Giant Crystal": 1
-    "Redemption Crystal": 1
-    "Dragon Crystal": 1
-    "Ashen Crystal": 1
-  count: 5
-
-"Multi-Hued Jewel":
-  ingredients:
-    "Multi-Hued Jewel Shard": 5
-    "Mysterious Vial: Wisdom": 1
-    "Mysterious Vial: Death": 1
-    "Mysterious Vial: Valor": 1
-    "Mandragora": 3
-    "Energy of Hail": 8
-  count: 5
-
-"Multi-Hued Jewel Shard":
-  ingredients:
-    "Phoenix Jewel": 1
-    "Giant Jewel": 1
-    "Redemption Jewel": 1
-    "Dragon Jewel": 1
-    "Ashen Jewel": 1
-  count: 5
-
-"Multi-Hued Soul Crystal":
-  ingredients:
-    "Multi-Hued Jewel": 20
-    "Heavenly Crystal": 4
-    "Phoenix's Feather": 2
-    "Depraved Seed": 2
-    "Mysterious Vial: Death": 6
-  count: 10
-
-"Multi-Hued Soul Jewel":
-  ingredients:
-    "Multi-Hued Soul Crystal": 10
-    "Heavenly Crystal": 3
-    "Phoenix's Feather": 1
-    "Depraved Seed": 1
-    "Mysterious Vial: Death": 3
-  count: 5
-
-"Mushroom":
-  fixed_price: 200
-
-"Mysterious Vial: Death":
-  fixed_price: 800000
-  ingredients:
-    "Mandragora": 4
-    "Multi-Hued Jewel Shard": 5
-    "Growth Vial [II]": 50
-    "Antidote [III]": 100
-    "Cyclamen": 100
-    "Jasmine": 400
-    "Dogwood Fruit": 200
-  count: 10
-
 "Mysterious Vial: Valor":
   fixed_price: 500000
   ingredients:
@@ -500,106 +537,189 @@
     "Green Mold": 600
   count: 10
 
-"Oil":
-  fixed_price: 3000
-
-"Opal":
-  fixed_price: 20000
-
-"Pearl":
-  fixed_price: 500
-
-"Phoenix Crystal":
-  fixed_price: 80000
-
-"Phoenix Jewel":
+"Mysterious Vial: Death":
+  fixed_price: 800000
   ingredients:
-    "Phoenix Crystal": 20
-    "Energy of Atmosphere": 4
-    "Flame Element Shard": 40
-  count: 2
-
-"Phoenix Soul Crystal":
-  ingredients:
-    "Phoenix Jewel": 20
-    "Hero's Blood": 5
-    "Energy of Wind": 20
-    "Sea Element": 20
-    "Mysterious Vial: Wisdom": 2
+    "Mandragora": 4
+    "Multi-Hued Jewel Shard": 5
+    "Growth Vial [II]": 50
+    "Antidote [III]": 100
+    "Cyclamen": 100
+    "Jasmine": 400
+    "Dogwood Fruit": 200
   count: 10
 
-"Phoenix Soul Jewel":
-  ingredients:
-    "Phoenix Soul Crystal": 10
-    "Hero's Blood": 15
-    "Energy of Hail": 15
-    "Sea Element": 50
-    "Mysterious Vial: Wisdom": 5
-  count: 5
+"Fusing Agent":
+  fixed_price: 2000
 
-"Phoenix's Feather":
-  market_price: 3600000
-
-"Pine":
+"Glue":
   fixed_price: 500
 
-"Platinum Ingot":
-  fixed_price: 10000
-
-"Potato":
-  fixed_price: 100
-
-"Redemption Crystal":
-  fixed_price: 80000
-
-"Redemption Jewel":
+"Alchemist's Stone":
   ingredients:
-    "Redemption Crystal": 40
-    "Energy of Wind": 5
-    "Storm Element Shard": 10
-  count: 2
-
-"Redemption Soul Crystal":
-  ingredients:
-    "Redemption Jewel": 20
-    "Hero's Blood": 5
-    "Energy of Wind": 20
+    "Mysterious Vial: Death": 10
+    "Mysterious Vial: Wisdom": 10
+    "Mysterious Vial: Valor": 10
+    "Earth Element": 50
     "Sea Element": 20
-    "Mysterious Vial: Wisdom": 2
-  count: 10
+    "Flame Element": 10
+    "Storm Element": 5
 
-"Redemption Soul Jewel":
-  ingredients:
-    "Redemption Soul Crystal": 10
-    "Hero's Blood": 15
-    "Energy of Hail": 15
-    "Sea Element": 50
-    "Mysterious Vial: Wisdom": 5
-  count: 5
+# Mineral
 
-"Revival Plant":
-  fixed_price: 20000
+"Gold Ingot":
+  fixed_price: 2000
 
 "Ruby":
   fixed_price: 30000
 
-"Sea Element":
-  fixed_price: 110000
+"Platinum Ingot":
+  fixed_price: 10000
 
-"Sea Element Shard":
-  fixed_price: 1000
+"Blue Sapphire":
+  market_price: 65000
 
-"Sesame Oil":
-  fixed_price: 500
+"Iron Sand":
+  fixed_price: 200
+
+"Coral":
+  fixed_price: 100
+
+"Oil":
+  fixed_price: 3000
+
+"Adamantinum":
+  market_price: 100000
+
+"Adamantinum Ingot":
+  ingredients:
+    "Adamantinum": 4
+    "Gold Ingot": 80
+    "Oil": 100
+  count: 2
+
+"Opal":
+  fixed_price: 20000
+
+"Imitation Oriharukon":
+  ingredients:
+    "Platinum Ingot": 210
+    "Pearl": 200
+    "Gold Ingot": 200
+    "Silver Ingot": 200
+    "Opal": 125
+    "Adamantinum Ingot": 20
+    "Large Diamond": 1
+    "Tanzanite": 50
+    "Ruby": 20
+    "Blue Sapphire": 25
+    "Multi-Hued Jewel": 1
+  count: 2
 
 "Silver Ingot":
   fixed_price: 1000
 
-"Silver Thread":
-  fixed_price: 1000
+"Pearl":
+  fixed_price: 500
 
-"Slab of Lumber":
-  fixed_price: 1000
+"Large Diamond":
+  ingredients:
+    "Opal": 100
+    "Iron Sand": 10
+
+"Tanzanite":
+  fixed_price: 5000
+
+# Misc.
+
+"Broken Animal Bones":
+  fixed_price: 300
+
+"Thick Animal Bone":
+  fixed_price: 5000
+
+"Albert's Fishing Tackle":
+  market_price: 800000
+
+"Hero's Blood":
+  fixed_price: 400000
+
+"Depraved Seed":
+  market_price: 8400000
+
+"Phoenix's Feather":
+  market_price: 3600000
+
+"Evil Soul Extract":
+  fixed_price: 200000
+
+"Atlantis Silver Coin":
+  market_price: 290000
+
+"Heavenly Crystal":
+  market_price: 5500000
+
+"Craftsman's Soul":
+  fixed_price: 300000
+
+"Evil Imprint":
+  market_price: 5000000
+
+"Vindictive Soul Imprint":
+  fixed_price: 350000
+
+# Necklace
+
+# Orb
+
+# Pants
+
+# Power Saw
+
+"Evil Power Saw":
+  ingredients:
+    "Evil Imprint": 15
+    "Vindictive Soul Imprint": 150
+    "Storm Element": 250
+    "Atlantis Silver Coin": 10
+    "Craftsman's Soul": 100
+    "Imitation Oriharukon": 3
+    "Alchemist's Stone": 1
+    "Monster Egg": 600
+    "Evil Soul Extract": 500
+
+# Ring
+
+# Scroll
+
+# Shield
+
+# Shoes
+
+# Spear
+
+# Staff
+
+# Stationery
+
+# Sword
+
+# Tool
+
+"Hammer [I]":
+  fixed_price: 100
+
+"Hammer [II]":
+  fixed_price: 1500
+
+"Hammer [III]":
+  fixed_price: 3000
+
+"Hammer [IV]":
+  fixed_price: 30000
+
+"Hammer [V]":
+  fixed_price: 100000
 
 "Small Bolt":
   ingredients:
@@ -616,54 +736,22 @@
     "Thick Tree Branch": 50
   count: 2
 
-"Spoiled Bait":
-  ingredients:
-    "Barley": 25
-    "Mushroom": 10
-    "Cucumber": 25
-  count: 100
-
-"Storm Element":
-  fixed_price: 750000
-
-"Storm Element Shard":
-  fixed_price: 11000
-
-"Sturdy Fishhook":
-  ingredients:
-    "Platinum Ingot": 3
-    "Thick Animal Bone": 100
-  count: 20
-
-"Sturdy Fishing Line":
-  ingredients:
-    "Silver Thread": 350
-    "Glue": 10
-  count: 20
-
-"Tanzanite":
-  fixed_price: 5000
-
-"Thick Animal Bone":
-  fixed_price: 5000
+# Wood
 
 "Thick Tree Branch":
   fixed_price: 300
 
-"Thin Fishhook":
-  ingredients:
-    "Silver Ingot": 15
-    "Broken Animal Bones": 100
-  count: 20
+"Maple":
+  market_price: 100
 
-"Thin Fishing Line":
-  ingredients:
-    "Thread": 600
-    "Glue": 10
-  count: 20
+"Pine":
+  fixed_price: 500
 
-"Thread":
-  fixed_price: 100
+"Slab of Lumber":
+  fixed_price: 1000
 
-"Vindictive Soul Imprint":
-  fixed_price: 350000
+# H Decor
+
+# H Finish
+
+# H Furniture
