@@ -17,3 +17,11 @@ end
 def format_number(number)
   number.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1,")
 end
+
+def format_time(seconds)
+  seconds = seconds.ceil
+  hours = seconds / 3600
+  mins = (seconds - 3600 * hours) / 60
+  secs = seconds - 3600 * hours - 60 * mins
+  "#{hours}h#{mins}m#{secs}s"
+end
