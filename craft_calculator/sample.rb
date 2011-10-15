@@ -38,12 +38,12 @@ end
 
 report "Print how many items can be crafted per hour for all craftable items (for Auto-Craft lvl 1 and 120)" do
   AtlanticaOnline::CraftCalculator::Item.items.select{ |i| i.craftable? }.sort_by { |i| i.name }.each do |item|
-    puts "#{item.name}: #{crafter_ac_1.items_per_hour(item.workload, item.count)} / #{crafter_ac_120.items_per_hour(item.workload, item.count)}"
+    puts "#{item.name}: #{crafter_ac_1.items_per_hour(item.workload, item.batch_size)} / #{crafter_ac_120.items_per_hour(item.workload, item.batch_size)}"
   end
 end
 
 report "Print how many items can be crafted per 8 hours for all craftable items (for Auto-Craft lvl 1 and 120)" do
   AtlanticaOnline::CraftCalculator::Item.items.select{ |i| i.craftable? }.sort_by { |i| i.name }.each do |item|
-    puts "#{item.name}: #{crafter_ac_1.items_per_hour(item.workload, item.count, 8)} / #{crafter_ac_120.items_per_hour(item.workload, item.count, 8)}"
+    puts "#{item.name}: #{crafter_ac_1.items_per_hour(item.workload, item.batch_size, 8)} / #{crafter_ac_120.items_per_hour(item.workload, item.batch_size, 8)}"
   end
 end

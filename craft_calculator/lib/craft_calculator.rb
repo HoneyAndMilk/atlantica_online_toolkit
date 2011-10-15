@@ -51,8 +51,8 @@ module AtlanticaOnline
         end
       end
 
-      def count
-        @data["count"] || 1
+      def batch_size
+        @data["batch_size"] || 1
       end
 
       def craftable?
@@ -69,7 +69,7 @@ module AtlanticaOnline
           ingredients.each do |ingredient_name, ingredient_count|
             result += self.class.find(ingredient_name).unit_price * ingredient_count
           end
-          result = result / count
+          result = result / batch_size
           if direct_price && direct_price < result
             result = direct_price
           end
@@ -85,7 +85,7 @@ module AtlanticaOnline
       end
 
       def craft_xp_gained_per_item
-        craft_xp_gained_per_batch / count.to_f
+        craft_xp_gained_per_batch / batch_size.to_f
       end
     end
 
