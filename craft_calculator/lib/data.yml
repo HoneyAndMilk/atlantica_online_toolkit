@@ -362,8 +362,70 @@
 "Thread":
   fixed_price: 100
 
+"Thin Rayon":
+  fixed_price: 20000
+
+"Embroidery Thread":
+  fixed_price: 300
+  ingredients:
+    "Thread": 50
+    "Glue": 2
+  batch_size: 20
+  workload: 1000
+  skill: "Sewing"
+  skill_lvl: 1
+
 "Silver Thread":
   fixed_price: 1000
+  ingredients:
+    "Embroidery Thread": 50
+    "Glue": 2
+  batch_size: 20
+  workload: 4000
+  skill: "Sewing"
+  skill_lvl: 10
+
+"Gold Thread":
+  fixed_price: 3000
+  ingredients:
+    "Silver Thread": 50
+    "Glue": 2
+  batch_size: 20
+  workload: 14000
+  skill: "Sewing"
+  skill_lvl: 15
+
+"Colorful Thread":
+  fixed_price: 10000
+  ingredients:
+    "Gold Thread": 30
+    "Silver Thread": 20
+    "Embroidery Thread": 30
+    "Thread": 100
+    "Pearl": 20
+  batch_size: 20
+  workload: 18000
+  skill: "Sewing"
+  skill_lvl: 20
+
+"Colorful Fabric":
+  fixed_price: 50000
+  ingredients:
+    "Gold Thread": 80
+    "Colorful Thread": 5
+  batch_size: 5
+  workload: 55000
+  skill: "Sewing"
+  skill_lvl: 23
+
+"Gorgeous Colorful Fabric":
+  ingredients:
+    "Thin Rayon": 60
+    "Colorful Fabric": 5
+  batch_size: 5
+  workload: 135000
+  skill: "Sewing"
+  skill_lvl: 25
 
 # Fishing
 
@@ -489,6 +551,9 @@
 
 "Carp":
   fixed_price: 300
+
+"Oriental Mushroom":
+  fixed_price: 80000
 
 "Monster Egg":
   fixed_price: 10000
@@ -708,6 +773,15 @@
 
 # Mineral
 
+"Enriched Adamantinum Ingot":
+  ingredients:
+    "Adamantinum Ingot": 100
+    "Ruby": 200
+    "Opal": 100
+  workload: 2000000
+  skill: "Tool"
+  skill_lvl: 32
+
 "Gold Ingot":
   fixed_price: 2000
 
@@ -780,6 +854,18 @@
 "Tanzanite":
   fixed_price: 5000
 
+"Titanium Ore":
+  fixed_price: 45000
+
+"Titanium Ingot":
+  ingredients:
+    "Titanium Ore": 15
+    "Silver Ingot": 50
+  batch_size: 2
+  workload: 136800
+  skill: "Tool"
+  skill_lvl: 37
+
 # Misc.
 
 "Broken Animal Bones":
@@ -787,6 +873,12 @@
 
 "Thick Animal Bone":
   fixed_price: 5000
+
+"Large Animal Bone":
+  fixed_price: 10000
+
+"Sharpened Claw":
+  fixed_price: 100000
 
 "Albert's Fishing Tackle":
   market_price: 800000
@@ -797,14 +889,29 @@
 "Depraved Seed":
   market_price: 8400000
 
+"Hydra's Poisonous Gland":
+  market_price: 720000
+
 "Phoenix's Feather":
   market_price: 3600000
 
 "Evil Soul Extract":
   fixed_price: 200000
 
+"Dragon God's Wishstone":
+  market_price: 2200000
+
 "Atlantis Silver Coin":
   market_price: 290000
+
+"Crystal of Temptation":
+  market_price: 4800000
+
+"Dragon God's Ire":
+  fixed_price: 1000000
+
+"Weapon & Armor Mold":
+  fixed_price: 500000
 
 "Heavenly Crystal":
   market_price: 5500000
@@ -818,6 +925,9 @@
 "Vindictive Soul Imprint":
   fixed_price: 350000
 
+"Mystic Gem":
+  market_price: 20000000
+
 # Necklace
 
 # Orb
@@ -825,6 +935,21 @@
 # Pants
 
 # Power Saw
+
+"Dragon God's Power Saw":
+  ingredients:
+    "Gorgeous Colorful Fabric": 30
+    "Dragon God's Wishstone": 8
+    "Enriched Adamantinum Ingot": 1
+    "Titanium Ingot": 50
+    "Flame Element": 380
+    "Animal Replica": 25
+    "Oriental Mushroom": 90
+    "Dragon God's Ire": 50
+    "Weapon & Armor Mold": 50
+  workload: 80000000
+  skill: "Power Saw"
+  skill_lvl: 101
 
 "Evil Power Saw":
   ingredients:
@@ -842,6 +967,31 @@
   skill_lvl: 110
 
 # Ring
+
+"Fu Xi's Ring": &ring_lvl_130
+  ingredients:
+    "Mystic Gem": 10
+    "Crystal of Temptation": 3
+    "Hydra's Poisonous Gland": 5
+    "Blue Sapphire": 100
+    "Large Diamond": 10
+    "Flame Element": 200
+    "Storm Element": 60
+  workload: 60000000
+  skill: "Accessory"
+  skill_lvl: 94
+
+"Chi You's Ring":
+  <<: *ring_lvl_130
+  skill_lvl: 96
+
+"Nuwa's Ring":
+  <<: *ring_lvl_130
+  skill_lvl: 98
+
+"Pangu's Ring":
+  <<: *ring_lvl_130
+  skill_lvl: 100
 
 # Scroll
 
@@ -894,6 +1044,16 @@
   workload: 15450
   skill: "Tool"
   skill_lvl: 15
+
+"Animal Replica":
+  ingredients:
+    "Sharpened Claw": 30
+    "Large Animal Bone": 100
+    "Storm Element Shard": 20
+  batch_size: 10
+  workload: 170000
+  skill: "Tool"
+  skill_lvl: 29
 
 # Wood
 
