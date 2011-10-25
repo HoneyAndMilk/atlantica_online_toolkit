@@ -1,5 +1,7 @@
 module AtlanticaOnline
   module CraftCalculator
+    CRAFT_XP_TO_WORKLOAD_RATIO = 50
+
     class Item
       def self.load_data_from_yaml(data_file = File.join(File.dirname(__FILE__), 'data.yml'))
         require 'yaml'
@@ -33,6 +35,56 @@ module AtlanticaOnline
         all.values
       end
 
+      def self.remove_leftovers_from_lists(craft_list, shopping_list, leftovers)
+        ingredient_leftovers = []
+
+        leftovers.each do |leftover|
+          if leftover.more_than_batch? && (cl_item = craft_list.detect { |i| i.name == leftover.name })
+            leftover.ingredients.each do |li_name, li_count|
+              ingredient_leftovers << LeftoverList::Item.new(find(li_name), li_count * leftover.complete_batches_count)
+            end
+
+            do_not_craft_count = leftover.complete_batches_count * leftover.batch_size
+            cl_item.count -= do_not_craft_count
+            leftover.count -= do_not_craft_count
+          elsif sl_item = shopping_list.detect { |i| i.name == leftover.name }
+            sl_item.count -= leftover.count
+            leftover.count = 0
+          end
+        end
+
+        leftovers = leftovers.reject { |l| l.count.zero? }
+
+        if !ingredient_leftovers.empty?
+          craft_list, shopping_list = remove_leftovers_from_lists(craft_list, shopping_list, ingredient_leftovers)
+        end
+
+        return craft_list, shopping_list, leftovers
+      end
+
+      def raw_leftovers(count, craft_list, shopping_list)
+        leftovers_list = []
+
+        shopping_list.each do |sl_item|
+          leftovers_list << LeftoverList::Item.new(sl_item.item, sl_item.count)
+        end
+
+        craft_list.each do |cl_item|
+          cl_item.ingredients.each do |cl_item_ingredient_name, cl_item_ingredient_count|
+            ingredient = leftovers_list.detect { |i| i.name == cl_item_ingredient_name }
+            ingredient.count -= cl_item_ingredient_count * cl_item.batches_count
+          end
+
+          if name != cl_item.name
+            leftovers_list << LeftoverList::Item.new(cl_item.item, cl_item.count)
+          elsif cl_item.count - count > 0
+            leftovers_list << LeftoverList::Item.new(cl_item.item, cl_item.count - count)
+          end
+        end
+
+        return leftovers_list.reject { |i| i.count.zero? }
+      end
+
       def initialize(hash)
         @data = hash
       end
@@ -59,33 +111,228 @@ module AtlanticaOnline
         !ingredients.nil?
       end
 
-      def direct_price
-        fixed_price || market_price
+      def crafting_is_cheaper?
+        craftable? && (!direct_price || craft_price < direct_price)
       end
 
-      def unit_price
+      def direct_price
+        send(direct_price_type)
+      end
+
+      def craft_price
+        return @craft_price if defined?(@craft_price)
+
         if craftable?
           result = 0
+
           ingredients.each do |ingredient_name, ingredient_count|
             result += self.class.find(ingredient_name).unit_price * ingredient_count
           end
+
           result = result / batch_size
-          if direct_price && direct_price < result
-            result = direct_price
-          end
         else
-          result = direct_price
+          result = nil
         end
 
-        return result
+        @craft_price = result
+      end
+
+      def price_type
+        if crafting_is_cheaper?
+          :craft_price
+        else
+          direct_price_type
+        end
+      end
+
+      def direct_price_type
+        if market_price && (!fixed_price || market_price < fixed_price)
+          :market_price
+        else
+          :fixed_price
+        end
+      end
+
+      def unit_price
+        return send(price_type)
+      end
+
+      def crafted_count(count)
+        batches_count(count) * batch_size
+      end
+
+      def batches_count(count)
+        (count / batch_size.to_f).ceil.to_i
+      end
+
+      def craft(count)
+        raw_craft_list = raw_craft_list(count).reverse
+        raw_shopping_list = raw_shopping_list(count)
+
+        craft_list, shopping_list, leftovers =
+          self.class.remove_leftovers_from_lists(
+          raw_craft_list,
+          raw_shopping_list,
+          raw_leftovers(count, raw_craft_list, raw_shopping_list)
+        )
+      end
+
+      def raw_craft_list(count)
+        list = []
+
+        if crafting_is_cheaper?
+          batches = batches_count(count)
+
+          list << CraftList::Item.new(self, crafted_count(count))
+
+          ingredients.each do |ingredient_name, ingredient_count|
+            ingredient_craft_list = self.class.find(ingredient_name).raw_craft_list(ingredient_count * batches)
+
+            ingredient_craft_list.each do |icl_item|
+              if existing_cl_item = list.detect { |i| i.name == icl_item.name }
+                icl_item.count += existing_cl_item.count
+                list.delete(existing_cl_item)
+              end
+
+              list << icl_item
+            end
+          end
+        end
+
+        return list
+      end
+
+      def raw_shopping_list(count)
+        list = []
+
+        if crafting_is_cheaper?
+          batches = batches_count(count)
+
+          ingredients.each do |ingredient_name, ingredient_count|
+            ingredient_shopping_list = self.class.find(ingredient_name).raw_shopping_list(ingredient_count * batches)
+
+            ingredient_shopping_list.each do |isl_item|
+              if existing_sl_item = list.detect { |l| l.name == isl_item.name }
+                existing_sl_item.count += isl_item.count
+              else
+                list << isl_item
+              end
+            end
+          end
+        else
+          list << ShoppingList::Item.new(self, count)
+        end
+
+        return list
       end
 
       def craft_xp_gained_per_batch
-        workload / 50
+        workload / CRAFT_XP_TO_WORKLOAD_RATIO
       end
 
       def craft_xp_gained_per_item
         craft_xp_gained_per_batch / batch_size.to_f
+      end
+    end
+
+    module ListItem
+      def self.included(base)
+        base.send(:attr_accessor, :count)
+        base.send(:attr_reader, :item)
+        base.extend(ClassMethods)
+        base.send(:delegated_methods, :name)
+      end
+
+      def initialize(item, count)
+        @item = item
+        @count = count
+      end
+
+      module ClassMethods
+        def delegated_methods(*args)
+          args.each do |method_name|
+            define_method method_name do
+              @item && @item.send(method_name)
+            end
+          end
+        end
+      end
+    end
+
+    module ShoppingList
+      class Item
+        include ListItem
+        delegated_methods :unit_price
+
+        def self.total_price(shopping_list)
+          result = 0
+
+          shopping_list.each do |i|
+            result += i.count * i.unit_price
+          end
+
+          return result
+        end
+      end
+    end
+
+    module CraftList
+      class Item
+        include ListItem
+        delegated_methods :ingredients, :batch_size, :workload, :skill
+
+        def self.total_workload_per_skill(craft_list)
+          result = Hash.new(0)
+
+          craft_list.each do |i|
+            result[i.skill] += i.batches_count * i.workload
+          end
+
+          return result
+        end
+
+        def self.total_craft_xp_gained_per_skill(craft_list)
+          result = {}
+
+          total_workload_per_skill(craft_list).each do |skill, skill_workload|
+            result[skill] = skill_workload / CRAFT_XP_TO_WORKLOAD_RATIO
+          end
+
+          return result
+        end
+
+        def self.total_workload(craft_list)
+          result = 0
+
+          craft_list.each do |i|
+            result += i.batches_count * i.workload
+          end
+
+          return result
+        end
+
+        def self.total_craft_xp_gained(craft_list)
+          total_workload(craft_list) / CRAFT_XP_TO_WORKLOAD_RATIO
+        end
+
+        def batches_count
+          count / batch_size
+        end
+      end
+    end
+
+    module LeftoverList
+      class Item
+        include ListItem
+        delegated_methods :ingredients, :batch_size
+
+        def complete_batches_count
+          (count / batch_size.to_f).floor.to_i
+        end
+
+        def more_than_batch?
+          complete_batches_count > 0
+        end
       end
     end
 
