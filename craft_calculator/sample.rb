@@ -9,6 +9,12 @@ report "Print prices (calculated, fixed or assumed market prices) for all items"
   end
 end
 
+report "Print money saved or lost by crafting for all craftable items available for fixed price" do
+  AtlanticaOnline::CraftCalculator::Item.items.select{ |i| i.craftable? && i.direct_price }.sort_by { |i| i.name }.each do |item|
+    puts "#{item(item.name)}: #{gold(item.money_saved_by_crafting)}#{item.crafting_is_more_expensive? ? " MONEY LOST!": ""}"
+  end
+end
+
 report "Print workload for all craftable items" do
   AtlanticaOnline::CraftCalculator::Item.items.select{ |i| i.craftable? }.sort_by { |i| i.name }.each do |item|
     puts "#{item(item.name)}: #{workload(item.workload)}"

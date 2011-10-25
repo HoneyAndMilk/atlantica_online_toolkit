@@ -115,6 +115,15 @@ module AtlanticaOnline
         craftable? && (!direct_price || craft_price < direct_price)
       end
 
+      def crafting_is_more_expensive?
+        craftable? && direct_price && craft_price > direct_price
+      end
+
+      def money_saved_by_crafting
+        return nil if !craftable? || !direct_price
+        direct_price - craft_price
+      end
+
       def direct_price
         send(direct_price_type)
       end
