@@ -1,5 +1,16 @@
 require 'benchmark'
 
+begin
+  require 'ansi/code'
+rescue LoadError
+  begin
+    require 'rubygems'
+    require 'ansi/code'
+  rescue LoadError
+    puts 'WARNING: You have to "gem install ansi" to get colored output'
+  end
+end
+
 def announce(message)
   length = [0, 75 - message.length].max
   puts "== %s %s" % [message, "=" * length]
@@ -15,7 +26,10 @@ def report(title, &block)
 end
 
 def format_number(number)
-  number.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1,")
+  number = number.to_i if (number % 1).zero?
+  parts = number.to_s.to_str.split('.')
+  parts[0].gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, '\\1,')
+  parts.join('.')
 end
 
 def format_time(seconds)
@@ -24,4 +38,32 @@ def format_time(seconds)
   mins = (seconds - 3600 * hours) / 60
   secs = seconds - 3600 * hours - 60 * mins
   "#{hours}h#{mins}m#{secs}s"
+end
+
+def colorize?
+  defined?(::ANSI::Code)
+end
+
+def item(string)
+  colorize? ? ::ANSI::Code.green { string } : string
+end
+
+def gold(fixnum)
+  string = format_number(fixnum)
+  colorize? ? ::ANSI::Code.yellow { string } : string
+end
+
+def workload(fixnum)
+  string = format_number(fixnum)
+  colorize? ? ::ANSI::Code.cyan { string } : string
+end
+
+def craft_xp(number)
+  string = format_number(number)
+  colorize? ? ::ANSI::Code.red { string } : string
+end
+
+def time(seconds)
+  string = format_time(seconds)
+  colorize? ? ::ANSI::Code.magenta { string } : string
 end
