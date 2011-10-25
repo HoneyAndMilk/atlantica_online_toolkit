@@ -43,6 +43,26 @@
 
 # Book
 
+"Book of Anguish":
+  fixed_price: 20000
+
+"Book: Healing [I]":
+  market_price: 50000
+
+"Book: Healing [II]":
+  ingredients:
+    "Book: Healing [I]": 20
+    "Quill": 5
+    "Parchment": 20
+    "Deluxe Ink Bottle": 15
+    "Silver Thread": 150
+    "Crystal of Anguish": 10
+    "Book of Anguish": 5
+  batch_size: 10
+  workload: 800000
+  skill: "Book"
+  skill_lvl: 33
+
 # Bow
 
 # Building
@@ -627,6 +647,12 @@
 "Mandragora":
   market_price: 500000
 
+"Yggdrasil's Leaf":
+  market_price: 2400
+
+"Yggdrasil's Fruit":
+  market_price: 48000
+
 "Revival Plant":
   fixed_price: 20000
 
@@ -640,6 +666,16 @@
   skill: "Medicine"
   skill_lvl: 12
 
+"Healing Potion [IV]":
+  ingredients:
+    "Healing Potion [III]": 100
+    "Mysterious Vial: Valor": 1
+    "Yggdrasil's Leaf": 50
+  batch_size: 100
+  workload: 200500
+  skill: "Medicine"
+  skill_lvl: 35
+
 "Mana Potion [III]":
   ingredients:
     "Chrysanthemum": 15
@@ -649,6 +685,36 @@
   workload: 5700
   skill: "Medicine"
   skill_lvl: 17
+
+"Mana Potion [IV]":
+  ingredients:
+    "Mana Potion [III]": 200
+    "Mysterious Vial: Wisdom": 1
+    "Yggdrasil's Fruit": 50
+  batch_size: 200
+  workload: 380000
+  skill: "Medicine"
+  skill_lvl: 40
+
+"Elixir [III]":
+  ingredients:
+    "Healing Potion [III]": 10
+    "Mana Potion [III]": 10
+    "Fusing Agent": 10
+  batch_size: 10
+  workload: 16500
+  skill: "Medicine"
+  skill_lvl: 19
+
+"Elixir [IV]":
+  ingredients:
+    "Healing Potion [IV]": 10
+    "Mana Potion [IV]": 10
+    "Fusing Agent": 25
+  batch_size: 10
+  workload: 60000
+  skill: "Medicine"
+  skill_lvl: 45
 
 "Antidote [III]":
   ingredients:
@@ -671,6 +737,17 @@
   workload: 2300
   skill: "Medicine"
   skill_lvl: 16
+
+"Life Potion [IV]":
+  ingredients:
+    "Mysterious Vial: Wisdom": 1
+    "Life Potion [III]": 200
+    "Revival Plant": 20
+    "Hero's Blood": 1
+  batch_size: 200
+  workload: 450000
+  skill: "Medicine"
+  skill_lvl: 50
 
 "Growth Vial [II]":
   fixed_price: 30000
@@ -751,6 +828,9 @@
   workload: 2050000
   skill: "Medicine"
   skill_lvl: 30
+
+"Polish":
+  fixed_price: 4000
 
 "Fusing Agent":
   fixed_price: 2000
@@ -868,6 +948,9 @@
 
 # Misc.
 
+"Weak Gunpowder":
+  fixed_price: 100
+
 "Broken Animal Bones":
   fixed_price: 300
 
@@ -891,6 +974,9 @@
 
 "Hydra's Poisonous Gland":
   market_price: 720000
+
+"Ivory":
+  fixed_price: 500
 
 "Phoenix's Feather":
   market_price: 3600000
@@ -1005,6 +1091,289 @@
 
 # Stationery
 
+"Blue Quill":
+  fixed_price: 3000
+
+"Papyrus":
+  fixed_price: 3600
+  ingredients:
+    "Coral": 100
+    "Maple": 100
+    "Thread": 100
+  batch_size: 10
+  workload: 6000
+  skill: "Stationery"
+  skill_lvl: 1
+
+"Fusain":
+  fixed_price: 14600
+  ingredients:
+    "Pine": 50
+    "Thick Tree Branch": 50
+    "Silver Ingot": 25
+  batch_size: 5
+  workload: 13200
+  skill: "Stationery"
+  skill_lvl: 10
+
+"Small Ink Bottle":
+  fixed_price: 1500
+  ingredients:
+    "Oil": 3
+    "Silver Ingot": 20
+  batch_size: 20
+  workload: 7000
+  skill: "Stationery"
+  skill_lvl: 13
+
+"Chinese Paper":
+  fixed_price: 7200
+  ingredients:
+    "Jasmine": 25
+    "Thread": 150
+    "Papyrus": 10
+  batch_size: 10
+  workload: 13700
+  skill: "Stationery"
+  skill_lvl: 15
+
+"Brush":
+  fixed_price: 43200
+  ingredients:
+    "Pine": 50
+    "Embroidery Thread": 60
+    "Fusain": 10
+  batch_size: 5
+  workload: 41400
+  skill: "Stationery"
+  skill_lvl: 20
+
+"Quality Ink Bottle":
+  fixed_price: 3600
+  ingredients:
+    "Small Ink Bottle": 20
+    "Thick Animal Bone": 5
+    "Dogwood Fruit": 50
+  batch_size: 20
+  workload: 11700
+  skill: "Stationery"
+  skill_lvl: 23
+
+"Parchment":
+  fixed_price: 26000
+  ingredients:
+    "Slab of Lumber": 20
+    "Silver Thread": 110
+    "Chinese Paper": 10
+  batch_size: 10
+  workload: 58400
+  skill: "Stationery"
+  skill_lvl: 25
+
+"Quill":
+  fixed_price: 76000
+  ingredients:
+    "Ivory": 100
+    "Oil": 20
+    "Weak Gunpowder": 100
+    "Brush": 5
+  batch_size: 5
+  workload: 86000
+  skill: "Stationery"
+  skill_lvl: 30
+
+"Deluxe Ink Bottle":
+  fixed_price: 6500
+  ingredients:
+    "Quality Ink Bottle": 20
+    "Thick Animal Bone": 5
+    "Green Mold": 50
+  batch_size: 20
+  workload: 21200
+  skill: "Stationery"
+  skill_lvl: 33
+
+"Whatman Paper":
+  fixed_price: 88000
+  ingredients:
+    "Big Slab of Lumber": 60
+    "Gold Thread": 140
+    "Parchment": 5
+  batch_size: 10
+  workload: 240000
+  skill: "Stationery"
+  skill_lvl: 35
+
+"Yellow Paper":
+  fixed_price: 2200
+  ingredients:
+    "Pearl": 5
+    "Silver Ingot": 5
+    "Thick Animal Bone": 2
+    "Sesame Oil": 5
+    "Gold Thread": 5
+  batch_size: 20
+  workload: 10800
+  skill: "Stationery"
+  skill_lvl: 37
+
+"Fountain Pen":
+  fixed_price: 162500
+  ingredients:
+    "Platinum Ingot": 4
+    "Silver Ingot": 100
+    "Blue Quill": 5
+    "Quill": 5
+  batch_size: 5
+  workload: 220000
+  skill: "Stationery"
+  skill_lvl: 40
+
+"Ornate Ink Bottle":
+  fixed_price: 13000
+  ingredients:
+    "Deluxe Ink Bottle": 20
+    "Polish": 15
+    "Green Mold": 100
+  batch_size: 20
+  workload: 53200
+  skill: "Stationery"
+  skill_lvl: 43
+
+"Drawing Paper":
+  fixed_price: 187000
+  ingredients:
+    "Big Slab of Lumber": 80
+    "Gold Thread": 200
+    "Oil": 100
+    "Whatman Paper": 5
+  batch_size: 10
+  workload: 633000
+  skill: "Stationery"
+  skill_lvl: 46
+
+"Ballpen":
+  fixed_price: 272000
+  ingredients:
+    "Platinum Ingot": 10
+    "Silver Ingot": 80
+    "Ivory": 80
+    "Fountain Pen": 5
+  batch_size: 5
+  workload: 351000
+  skill: "Stationery"
+  skill_lvl: 49
+
+"Shiny Ink Bottle":
+  fixed_price: 29000
+  ingredients:
+    "Ornate Ink Bottle": 20
+    "Polish": 20
+    "Cyclamen": 100
+  batch_size: 20
+  workload: 139000
+  skill: "Stationery"
+  skill_lvl: 52
+
+"Magic Parchment":
+  fixed_price: 703000
+  ingredients:
+    "Parchment": 40
+    "Gold Thread": 300
+    "Multi-Hued Crystal Shard": 20
+    "Drawing Paper": 5
+  batch_size: 10
+  workload: 1880000
+  skill: "Stationery"
+  skill_lvl: 54
+
+"Magic Pen":
+  fixed_price: 566000
+  ingredients:
+    "Opal": 5
+    "Gold Ingot": 20
+    "Multi-Hued Crystal Shard": 5
+    "Ballpen": 5
+  batch_size: 5
+  workload: 754000
+  skill: "Stationery"
+  skill_lvl: 55
+
+"Magical Ink Bottle":
+  fixed_price: 80000
+  ingredients:
+    "Shiny Ink Bottle": 20
+    "Multi-Hued Crystal Shard": 5
+    "Cyclamen": 50
+  batch_size: 20
+  workload: 365000
+  skill: "Stationery"
+  skill_lvl: 56
+
+"Wiseman's Golden Parchment":
+  ingredients:
+    "Magic Parchment": 8
+    "Colorful Fabric": 40
+    "Multi-Hued Crystal": 10
+    "Opal": 15
+  batch_size: 10
+  workload: 3900000
+  skill: "Stationery"
+  skill_lvl: 57
+
+"Wiseman's Golden Pen":
+  ingredients:
+    "Adamantinum Ingot": 10
+    "Gold Ingot": 100
+    "Multi-Hued Crystal": 3
+    "Magic Pen": 5
+  batch_size: 5
+  workload: 1910000
+  skill: "Stationery"
+  skill_lvl: 58
+
+"Wiseman's Golden Ink Bottle":
+  ingredients:
+    "Magical Ink Bottle": 20
+    "Multi-Hued Crystal": 2
+    "Mandragora": 1
+  batch_size: 20
+  workload: 926000
+  skill: "Stationery"
+  skill_lvl: 59
+
+"Multi-Hued Parchment":
+  ingredients:
+    "Wiseman's Golden Parchment": 8
+    "Gorgeous Colorful Fabric": 20
+    "Multi-Hued Jewel Shard": 5
+    "Opal": 15
+  batch_size: 10
+  workload: 9110000
+  skill: "Stationery"
+  skill_lvl: 60
+
+"Multi-Hued Pen":
+  ingredients:
+    "Adamantinum Ingot": 10
+    "Opal": 25
+    "Multi-Hued Jewel Shard": 2
+    "Wiseman's Golden Pen": 5
+  batch_size: 5
+  workload: 4360000
+  skill: "Stationery"
+  skill_lvl: 61
+
+"Multi-Hued Ink Bottle":
+  ingredients:
+    "Wiseman's Golden Ink Bottle": 20
+    "Multi-Hued Jewel Shard": 2
+    "Mandragora": 2
+  batch_size: 20
+  workload: 2220000
+  skill: "Stationery"
+  skill_lvl: 62
+
 # Sword
 
 # Tool
@@ -1061,13 +1430,16 @@
   fixed_price: 300
 
 "Maple":
-  market_price: 100
+  fixed_price: 100
 
 "Pine":
   fixed_price: 500
 
 "Slab of Lumber":
   fixed_price: 1000
+
+"Big Slab of Lumber":
+  fixed_price: 5000
 
 # H Decor
 
