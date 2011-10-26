@@ -36,7 +36,7 @@ module AtlanticaOnline
       end
 
       def self.remove_leftovers_from_lists(craft_list, shopping_list, leftovers)
-        ingredient_leftovers = []
+        ingredient_leftovers = LeftoverList::ItemArray.new
 
         leftovers.each do |leftover|
           if leftover.more_than_batch? && (cl_item = craft_list.detect { |i| i.name == leftover.name })
@@ -63,7 +63,7 @@ module AtlanticaOnline
       end
 
       def raw_leftovers(count, craft_list, shopping_list)
-        leftovers_list = []
+        leftovers_list = LeftoverList::ItemArray.new
 
         shopping_list.each do |sl_item|
           leftovers_list << LeftoverList::Item.new(sl_item.item, sl_item.count)
@@ -187,7 +187,7 @@ module AtlanticaOnline
       end
 
       def raw_craft_list(count)
-        list = []
+        list = CraftList::ItemArray.new
 
         if crafting_is_cheaper?
           batches = batches_count(count)
@@ -212,7 +212,7 @@ module AtlanticaOnline
       end
 
       def raw_shopping_list(count)
-        list = []
+        list = ShoppingList::ItemArray.new
 
         if crafting_is_cheaper?
           batches = batches_count(count)
@@ -272,11 +272,13 @@ module AtlanticaOnline
       class Item
         include ListItem
         delegated_methods :unit_price
+      end
 
-        def self.total_price(shopping_list)
+      class ItemArray < Array
+        def total_price
           result = 0
 
-          shopping_list.each do |i|
+          self.each do |i|
             result += i.count * i.unit_price
           end
 
@@ -290,42 +292,44 @@ module AtlanticaOnline
         include ListItem
         delegated_methods :ingredients, :batch_size, :workload, :skill
 
-        def self.total_workload_per_skill(craft_list)
+        def batches_count
+          count / batch_size
+        end
+      end
+
+      class ItemArray < Array
+        def total_workload_per_skill
           result = Hash.new(0)
 
-          craft_list.each do |i|
+          self.each do |i|
             result[i.skill] += i.batches_count * i.workload
           end
 
           return result
         end
 
-        def self.total_craft_xp_gained_per_skill(craft_list)
+        def total_craft_xp_gained_per_skill
           result = {}
 
-          total_workload_per_skill(craft_list).each do |skill, skill_workload|
+          total_workload_per_skill.each do |skill, skill_workload|
             result[skill] = skill_workload / CRAFT_XP_TO_WORKLOAD_RATIO
           end
 
           return result
         end
 
-        def self.total_workload(craft_list)
+        def total_workload
           result = 0
 
-          craft_list.each do |i|
+          self.each do |i|
             result += i.batches_count * i.workload
           end
 
           return result
         end
 
-        def self.total_craft_xp_gained(craft_list)
-          total_workload(craft_list) / CRAFT_XP_TO_WORKLOAD_RATIO
-        end
-
-        def batches_count
-          count / batch_size
+        def total_craft_xp_gained
+          total_workload / CRAFT_XP_TO_WORKLOAD_RATIO
         end
       end
     end
@@ -342,6 +346,9 @@ module AtlanticaOnline
         def more_than_batch?
           complete_batches_count > 0
         end
+      end
+
+      class ItemArray < Array
       end
     end
 

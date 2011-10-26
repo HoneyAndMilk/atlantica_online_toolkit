@@ -58,11 +58,11 @@ report "Print shopping list, craft list, total workload and total price" do
   AtlanticaOnline::CraftCalculator::Item.items.select{ |i| i.crafting_is_cheaper? }.sort_by { |i| i.name }.each do |item|
     count = 5
     craft_list, shopping_list, leftovers = item.craft(count)
-    total_workload = AtlanticaOnline::CraftCalculator::CraftList::Item.total_workload(craft_list)
-    total_workload_per_skill = AtlanticaOnline::CraftCalculator::CraftList::Item.total_workload_per_skill(craft_list)
-    total_craft_xp_gained = AtlanticaOnline::CraftCalculator::CraftList::Item.total_craft_xp_gained(craft_list)
-    total_craft_xp_gained_per_skill = AtlanticaOnline::CraftCalculator::CraftList::Item.total_craft_xp_gained_per_skill(craft_list)
-    total_price = AtlanticaOnline::CraftCalculator::ShoppingList::Item.total_price(shopping_list)
+    total_workload = craft_list.total_workload
+    total_workload_per_skill = craft_list.total_workload_per_skill
+    total_craft_xp_gained = craft_list.total_craft_xp_gained
+    total_craft_xp_gained_per_skill = craft_list.total_craft_xp_gained_per_skill
+    total_price = shopping_list.total_price
     puts "#{item(item.name)} (requested #{count}, crafted #{item.crafted_count(count)})"
     puts "  price: #{gold(total_price)}"
     puts "  workload: #{workload(total_workload)}"
