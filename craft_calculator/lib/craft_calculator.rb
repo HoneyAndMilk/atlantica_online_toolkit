@@ -128,8 +128,8 @@ module AtlanticaOnline
         send(direct_price_type)
       end
 
-      def craft_price
-        return @craft_price if defined?(@craft_price)
+      def batch_craft_price
+        return @batch_craft_price if defined?(@batch_craft_price)
 
         if craftable?
           result = 0
@@ -137,13 +137,15 @@ module AtlanticaOnline
           ingredients.each do |ingredient_name, ingredient_count|
             result += self.class.find(ingredient_name).unit_price * ingredient_count
           end
-
-          result = result / batch_size
         else
           result = nil
         end
 
-        @craft_price = result
+        @batch_craft_price = result
+      end
+
+      def craft_price
+        batch_craft_price / batch_size
       end
 
       def price_type
