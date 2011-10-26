@@ -274,6 +274,10 @@ module AtlanticaOnline
       class Item
         include ListItem
         delegated_methods :unit_price
+
+        def total_price
+          count * unit_price
+        end
       end
 
       class ItemArray < Array
@@ -281,7 +285,7 @@ module AtlanticaOnline
           result = 0
 
           self.each do |i|
-            result += i.count * i.unit_price
+            result += i.total_price
           end
 
           return result
