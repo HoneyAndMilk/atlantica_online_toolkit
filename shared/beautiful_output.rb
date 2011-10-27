@@ -40,6 +40,13 @@ def format_time(seconds)
   "#{hours}h#{mins}m#{secs}s"
 end
 
+def print_item_with_raw_craft_tree(item, level = 0)
+  puts "#{" " * (level * 2)} #{item.name} - required: #{item.count}, crafted/purchased: #{item.crafted_count}"
+  item.ingredients_craft_tree.each do |i|
+    print_item_with_raw_craft_tree(i, level + 1)
+  end
+end
+
 def colorize?
   defined?(::ANSI::Code)
 end

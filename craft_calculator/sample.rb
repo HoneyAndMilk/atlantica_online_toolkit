@@ -63,6 +63,7 @@ report "Print shopping list, craft list, total workload and total price" do
     total_craft_xp_gained = craft_list.total_craft_xp_gained
     total_craft_xp_gained_per_skill = craft_list.total_craft_xp_gained_per_skill
     total_price = shopping_list.total_price
+    item_with_raw_craft_tree = item.item_with_raw_craft_tree(count)
     puts "#{item(item.name)} (requested #{count}, crafted #{item.crafted_count(count)})"
     puts "  price: #{gold(total_price)}"
     puts "  workload: #{workload(total_workload)}"
@@ -89,5 +90,8 @@ report "Print shopping list, craft list, total workload and total price" do
     leftovers.each do |leftover|
       puts "  #{leftover.name}: #{leftover.count}"
     end
+
+    puts "raw craft tree:"
+    print_item_with_raw_craft_tree(item_with_raw_craft_tree)
   end
 end
