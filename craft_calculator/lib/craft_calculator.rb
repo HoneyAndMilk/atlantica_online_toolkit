@@ -36,12 +36,16 @@ module AtlanticaOnline
       end
 
       def self.remove_leftovers_from_lists(craft_list, shopping_list, leftovers)
-        ingredient_leftovers = LeftoverList::ItemArray.new
-
         leftovers.each do |leftover|
           if leftover.more_than_batch? && (cl_item = craft_list.detect { |i| i.name == leftover.name })
             leftover.ingredient_list.each do |li|
-              ingredient_leftovers << LeftoverList::Item.new(li.item, li.count * leftover.complete_batches_count)
+              existing_leftover = leftovers.detect { |l| l.item == li.item }
+              leftover_count = li.count * leftover.complete_batches_count
+              if existing_leftover
+                existing_leftover.count += leftover_count
+              else
+                leftovers << LeftoverList::Item.new(li.item, leftover_count)
+              end
             end
 
             do_not_craft_count = leftover.complete_batches_count * leftover.batch_size
@@ -55,8 +59,8 @@ module AtlanticaOnline
 
         leftovers = leftovers.reject { |l| l.count.zero? }
 
-        if !ingredient_leftovers.empty?
-          craft_list, shopping_list = remove_leftovers_from_lists(craft_list, shopping_list, ingredient_leftovers)
+        while leftovers.detect { |l| l.more_than_batch? } do
+          craft_list, shopping_list, leftovers = remove_leftovers_from_lists(craft_list, shopping_list, leftovers)
         end
 
         return craft_list, shopping_list, leftovers
