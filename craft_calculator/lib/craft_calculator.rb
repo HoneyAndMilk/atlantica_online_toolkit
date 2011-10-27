@@ -334,6 +334,7 @@ module AtlanticaOnline
     module CraftTree
       class Item
         include ListItem
+        delegated_methods :unit_price
         attr_reader :crafted_count, :ingredients_craft_tree
 
         def initialize(item, count, crafted_count, ingredients_craft_tree)
@@ -345,6 +346,10 @@ module AtlanticaOnline
 
         def crafted?
           !ingredients_craft_tree.empty?
+        end
+
+        def total_price
+          unit_price * crafted_count
         end
 
         def leftover_count
