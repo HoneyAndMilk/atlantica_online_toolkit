@@ -3,10 +3,16 @@ module AtlanticaOnline
     CRAFT_XP_TO_WORKLOAD_RATIO = 50
 
     class Item
-      def self.load_data_from_yaml(data_file = File.join(File.dirname(__FILE__), 'data.yml'))
+      def self.load_data_from_yaml(custom_prices = {}, data_file = File.join(File.dirname(__FILE__), 'data.yml'))
         require 'yaml'
 
         yaml_data = YAML::load(File.open(data_file))
+
+        custom_prices.each do |item_name, price|
+          if yaml_data[item_name]
+            yaml_data[item_name]["market_price"] = price
+          end
+        end
 
         self.all = yaml_data
       end

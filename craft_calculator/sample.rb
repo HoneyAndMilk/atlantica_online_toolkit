@@ -95,3 +95,20 @@ report "Print shopping list, craft list, total workload and total price" do
     print_item_with_raw_craft_tree(item_with_raw_craft_tree)
   end
 end
+
+report "Print prices using fixed price, then using custom market price" do
+  item_names = ["Ashen Crystal", "Ashen Jewel", "Multi-Hued Jewel"]
+
+  item_names.each do |item_name|
+    item = AtlanticaOnline::CraftCalculator::Item.find(item_name)
+    puts "#{item(item.name)}: #{gold(item.unit_price)} (#{item.price_type})"
+  end
+
+  puts "-" * 79
+
+  item_names.each do |item_name|
+    AtlanticaOnline::CraftCalculator::Item.load_data_from_yaml({ "Ashen Crystal" => 5400 })
+    item = AtlanticaOnline::CraftCalculator::Item.find(item_name)
+    puts "#{item(item.name)}: #{gold(item.unit_price)} (#{item.price_type})"
+  end
+end
