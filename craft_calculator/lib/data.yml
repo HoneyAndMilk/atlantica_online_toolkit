@@ -1279,11 +1279,17 @@
 "Crystal of Temptation":
   market_price: 4800000
 
+"Necklace Mold":
+  fixed_price: 200000
+
 "Dragon God's Ire":
   fixed_price: 1000000
 
 "Weapon & Armor Mold":
   fixed_price: 500000
+
+"Van Gogh's Soul Stone":
+  market_price: 120000000
 
 "Heavenly Crystal":
   market_price: 5500000
@@ -1301,6 +1307,41 @@
   market_price: 20000000
 
 # Necklace
+
+"Shimmering Opal Necklace": &necklace_lvl_105
+  ingredients:
+    "Necklace Mold": 150
+    "Sea Element": 330
+    "Opal": 800
+  workload: 8000000
+  skill: "Accessory"
+  skill_lvl: 54
+
+"Sharp Opal Necklace":
+  <<: *necklace_lvl_105
+  skill_lvl: 58
+
+"Tough Opal Necklace":
+  <<: *necklace_lvl_105
+  skill_lvl: 62
+
+"Shimmering Ruby Necklace": &necklace_lvl_120
+  ingredients:
+    "Necklace Mold": 400
+    "Flame Element": 330
+    "Van Gogh's Soul Stone": 2
+    "Ruby": 400
+  workload: 16000000
+  skill: "Accessory"
+  skill_lvl: 82
+
+"Sharp Ruby Necklace":
+  <<: *necklace_lvl_120
+  skill_lvl: 86
+
+"Tough Ruby Necklace":
+  <<: *necklace_lvl_120
+  skill_lvl: 90
 
 # Orb
 
@@ -1339,6 +1380,154 @@
   skill_lvl: 110
 
 # Ring
+
+"Ring of Dull Swords": &ring_lvl_1
+  ingredients:
+    "Ashen Crystal": 10
+    "Ivory": 20
+    "Pearl": 20
+    "Coral": 20
+  workload: 6500
+  skill: "Accessory"
+  skill_lvl: 5
+
+"Ring of Blunt Spears":
+  <<: *ring_lvl_1
+
+"Ring of Dull Axes":
+  <<: *ring_lvl_1
+
+"Ring of Broken Arrows":
+  <<: *ring_lvl_1
+
+"Ring of Wet Gunpowder":
+  <<: *ring_lvl_1
+
+"Ring of Empty Cannons":
+  <<: *ring_lvl_1
+
+"Ring of Null Magic":
+  <<: *ring_lvl_1
+
+"Ring of Strength": &ring_lvl_20
+  ingredients:
+    "Ashen Crystal": 2
+    "Pearl": 22
+    "Iron Sand": 20
+    "Coral": 20
+  workload: 3500
+  skill: "Accessory"
+  skill_lvl: 1
+
+"Ring of Dexterity":
+  <<: *ring_lvl_20
+
+"Ring of Vitality":
+  <<: *ring_lvl_20
+
+"Ring of Intelligence":
+  <<: *ring_lvl_20
+
+"Ring of the Hero": &ring_lvl_40
+  ingredients:
+    "Ashen Crystal": 30
+    "Ivory": 50
+    "Silver Ingot": 40
+    "Pearl": 100
+    "Gold Ingot": 4
+  workload: 40000
+  skill: "Accessory"
+  skill_lvl: 10
+
+"Ring of Wind":
+  <<: *ring_lvl_40
+
+"Ring of the Phoenix":
+  <<: *ring_lvl_40
+
+"Ring of the Wiseman":
+  <<: *ring_lvl_40
+
+"Ring of the Strong Man": &ring_lvl_60
+  ingredients:
+    "Ashen Jewel": 10
+    "Gold Ingot": 180
+    "Pearl": 30
+    "Fusing Agent": 10
+  workload: 350000
+  skill: "Accessory"
+  skill_lvl: 25
+
+"Ring of the Gale":
+  <<: *ring_lvl_60
+
+"Ring of Eternity":
+  <<: *ring_lvl_60
+
+"Ring of the Hermit":
+  <<: *ring_lvl_60
+
+"Ring of Destruction": &ring_lvl_80
+  ingredients:
+    "Multi-Hued Crystal": 5
+    "Tanzanite": 40
+    "Silver Ingot": 200
+    "Gold Ingot": 100
+  workload: 1120000
+  skill: "Accessory"
+  skill_lvl: 30
+
+"Ring of Assassination":
+  <<: *ring_lvl_80
+
+"Ring of Protection":
+  <<: *ring_lvl_80
+
+"Ring of Salvation":
+  <<: *ring_lvl_80
+
+"Ring of Rage": &ring_lvl_100
+  ingredients:
+    "Multi-Hued Jewel": 2
+    "Opal": 30
+    "Ruby": 30
+    "Gold Ingot": 500
+    "Platinum Ingot": 150
+  workload: 2800000
+  skill: "Accessory"
+  skill_lvl: 50
+
+"Ring of Malice":
+  <<: *ring_lvl_100
+
+"Ring of Endurance":
+  <<: *ring_lvl_100
+
+"Ring of Devotion":
+  <<: *ring_lvl_100
+
+"Ring of Volition": &ring_lvl_120
+  ingredients:
+    "Multi-Hued Jewel": 3
+    "Blue Sapphire": 70
+    "Ruby": 100
+    "Flame Element": 80
+    "Sea Element": 200
+  workload: 14000000
+  skill: "Accessory"
+  skill_lvl: 70
+
+"Ring of Celerity":
+  <<: *ring_lvl_120
+  skill_lvl: 75
+
+"Ring of Sacrifice":
+  <<: *ring_lvl_120
+  skill_lvl: 80
+
+"Ring of Nobility":
+  <<: *ring_lvl_120
+  skill_lvl: 65
 
 "Fu Xi's Ring": &ring_lvl_130
   ingredients:
