@@ -23,6 +23,44 @@
   skill: "Action"
   skill_lvl: 10
 
+"Action: Auto-Craft [II]":
+  ingredients:
+    "Multi-Hued Crystal": 1
+    "Platinum Ingot": 100
+    "Hammer [II]": 50
+    "Enchant Stone [II]": 10
+    "Auto-Craft Doll MK-1": 2
+  batch_size: 4
+  workload: 210000
+  skill: "Action"
+  skill_lvl: 15
+
+"Action: Fishing [II]":
+  ingredients:
+    "Multi-Hued Crystal": 1
+    "Platinum Ingot": 50
+    "Iron Fishing Rod": 5
+    "Mithril Fishing Rod": 5
+    "Mediocre Bait": 100
+    "Common Bait": 100
+    "Auto Fishing Doll MK-1": 2
+  batch_size: 4
+  workload: 270000
+  skill: "Action"
+  skill_lvl: 17
+
+"Action: Auto-Craft [III]":
+  ingredients:
+    "Multi-Hued Jewel Shard": 1
+    "Ruby": 50
+    "Hammer [III]": 50
+    "Enchant Stone [III]": 10
+    "Auto-Craft Doll MK-2": 3
+  batch_size: 4
+  workload: 530000
+  skill: "Action"
+  skill_lvl: 20
+
 "Action: Fishing [III]":
   ingredients:
     "Multi-Hued Jewel Shard": 2
@@ -35,6 +73,31 @@
   skill: "Action"
   skill_lvl: 25
 
+"Action: Auto-Craft [IV]":
+  ingredients:
+    "Multi-Hued Jewel": 5
+    "Ruby": 100
+    "Hammer [III]": 50
+    "Enchant Stone [IV]": 5
+    "Auto-Craft Doll MK-3": 3
+    "Sea Element": 70
+  batch_size: 4
+  workload: 4500000
+  skill: "Action"
+  skill_lvl: 30
+
+"Action: Fishing [IV]":
+  ingredients:
+    "Multi-Hued Jewel": 5
+    "Ruby": 100
+    "Titanium Fishing Rod": 5
+    "Albert's Special Bait": 200
+    "Auto Fishing Doll MK-3": 3
+  batch_size: 4
+  workload: 5000000
+  skill: "Action"
+  skill_lvl: 35
+
 # Armor
 
 # Arrow
@@ -42,6 +105,9 @@
 # Axe
 
 # Book
+
+"Artisan Crafting Secrets":
+  market_price: 10000
 
 "Book of Anguish":
   fixed_price: 20000
@@ -62,6 +128,12 @@
   workload: 800000
   skill: "Book"
   skill_lvl: 33
+
+"Book of Craftsmanship":
+  market_price: 118000
+
+"Normal Crafting Secrets":
+  market_price: 200
 
 # Bow
 
@@ -509,6 +581,68 @@
   skill: "Fishing"
   skill_lvl: 15
 
+"Thick Fishing Line":
+  ingredients:
+    "Embroidery Thread": 700
+    "Glue": 20
+  batch_size: 20
+  workload: 38500
+  skill: "Fishing"
+  skill_lvl: 20
+
+"Thick Fishhook":
+  ingredients:
+    "Tanzanite": 10
+    "Common Gunpowder": 80
+  batch_size: 20
+  workload: 19400
+  skill: "Fishing"
+  skill_lvl: 22
+
+"Iron Fishing Rod":
+  ingredients:
+    "Tanzanite": 50
+    "Silver Ingot": 50
+    "Thick Fishing Line": 20
+    "Thick Fishhook": 30
+    "Flame Element Shard": 30
+  batch_size: 10
+  workload: 335000
+  skill: "Fishing"
+  skill_lvl: 24
+
+"Mediocre Bait":
+  ingredients:
+    "Barley": 250
+    "Cucumber": 300
+    "Honey": 230
+  batch_size: 100
+  workload: 32600
+  skill: "Fishing"
+  skill_lvl: 24
+
+"Mithril Fishing Rod":
+  ingredients:
+    "Oil": 40
+    "Iron Sand": 100
+    "Thick Fishing Line": 20
+    "Thick Fishhook": 40
+    "Storm Element Shard": 5
+  batch_size: 10
+  workload: 480000
+  skill: "Fishing"
+  skill_lvl: 26
+
+"Common Bait":
+  ingredients:
+    "Pork": 400
+    "Potato": 350
+    "Sesame Oil": 100
+  batch_size: 100
+  workload: 47100
+  skill: "Fishing"
+  skill_lvl: 26
+
 "Sturdy Fishing Line":
   ingredients:
     "Silver Thread": 350
@@ -545,9 +679,50 @@
     "Beef": 250
     "Sesame Oil": 50
   batch_size: 100
-  workload: 716000
+  workload: 71600
   skill: "Fishing"
   skill_lvl: 32
+
+"Strong Fishing Line":
+  ingredients:
+    "Colorful Thread": 200
+    "Glue": 20
+    "Colorful Fabric": 50
+  batch_size: 20
+  workload: 83000
+  skill: "Fishing"
+  skill_lvl: 40
+
+"Strong Fishhook":
+  ingredients:
+    "Adamantinum": 20
+    "Large Animal Bone": 100
+  batch_size: 20
+  workload: 41800
+  skill: "Fishing"
+  skill_lvl: 42
+
+"Titanium Fishing Rod":
+  ingredients:
+    "Titanium Ingot": 1
+    "Gold Ingot": 20
+    "Strong Fishing Line": 10
+    "Strong Fishhook": 20
+    "Sea Element": 2
+  batch_size: 10
+  workload: 796000
+  skill: "Fishing"
+  skill_lvl: 46
+
+"Albert's Special Bait":
+  ingredients:
+    "Dumpling": 350
+    "Grilled Pork": 350
+    "Sesame Oil": 50
+  batch_size: 100
+  workload: 71600
+  skill: "Fishing"
+  skill_lvl: 46
 
 # Food
 
@@ -563,14 +738,44 @@
 "Cucumber":
   fixed_price: 100
 
+"Wheat":
+  fixed_price: 100
+
+"Pork":
+  fixed_price: 100
+
 "Beef":
   fixed_price: 300
+
+"Honey":
+  fixed_price: 100
 
 "Sesame Oil":
   fixed_price: 500
 
+"Salt":
+  fixed_price: 100
+
 "Carp":
   fixed_price: 300
+
+"Dumpling":
+  ingredients:
+    "Pork": 4
+    "Wheat": 6
+  batch_size: 10
+  workload: 500
+  skill: "Food"
+  skill_lvl: 1
+
+"Grilled Pork":
+  ingredients:
+    "Pork": 8
+    "Salt": 4
+  batch_size: 10
+  workload: 600
+  skill: "Food"
+  skill_lvl: 2
 
 "Oriental Mushroom":
   fixed_price: 80000
@@ -592,6 +797,51 @@
 
 # Machine
 
+"Auto-Craft Doll MK-1":
+  ingredients:
+    "Small Marionette": 1
+    "Mysterious Vial: Wisdom": 1
+    "Earth Element Shard": 300
+    "Normal Crafting Secrets": 100
+    "Polish": 10
+    "Pearl": 150
+    "Oil": 15
+    "Small Bolt": 15
+  batch_size: 5
+  workload: 1830000
+  skill: "Machine"
+  skill_lvl: 20
+
+"Auto Fishing Doll MK-1":
+  ingredients:
+    "Albert's Fishing Tackle": 1
+    "Mysterious Vial: Valor": 3
+    "Sea Element Shard": 100
+    "Small Lever": 10
+    "Polish": 100
+    "Pearl": 150
+    "Oil": 20
+    "Small Bolt": 20
+  batch_size: 5
+  workload: 2220000
+  skill: "Machine"
+  skill_lvl: 25
+
+"Auto-Craft Doll MK-2":
+  ingredients:
+    "Small Marionette": 1
+    "Mysterious Vial: Wisdom": 2
+    "Sea Element Shard": 200
+    "Artisan Crafting Secrets": 50
+    "Polish": 10
+    "Platinum Ingot": 5
+    "Oil": 30
+    "Small Bolt": 30
+  batch_size: 5
+  workload: 3500000
+  skill: "Machine"
+  skill_lvl: 30
+
 "Auto Fishing Doll MK-2":
   ingredients:
     "Albert's Fishing Tackle": 1
@@ -606,6 +856,36 @@
   workload: 4450000
   skill: "Machine"
   skill_lvl: 32
+
+"Auto-Craft Doll MK-3":
+  ingredients:
+    "Small Marionette": 1
+    "Mysterious Vial: Wisdom": 2
+    "Sea Element": 50
+    "Book of Craftsmanship": 20
+    "Polish": 10
+    "Platinum Ingot": 10
+    "Oil": 30
+    "Small Bolt": 30
+  batch_size: 5
+  workload: 9800000
+  skill: "Machine"
+  skill_lvl: 38
+
+"Auto Fishing Doll MK-3":
+  ingredients:
+    "Albert's Fishing Tackle": 3
+    "Mysterious Vial: Valor": 2
+    "Flame Element": 30
+    "Small Lever": 20
+    "Fusing Agent": 10
+    "Platinum Ingot": 10
+    "Oil": 50
+    "Small Bolt": 50
+  batch_size: 5
+  workload: 13500000
+  skill: "Machine"
+  skill_lvl: 41
 
 # Mana Stone
 
@@ -951,6 +1231,9 @@
 "Weak Gunpowder":
   fixed_price: 100
 
+"Common Gunpowder":
+  fixed_price: 2000
+
 "Broken Animal Bones":
   fixed_price: 300
 
@@ -962,6 +1245,9 @@
 
 "Sharpened Claw":
   fixed_price: 100000
+
+"Small Marionette":
+  market_price: 12000000
 
 "Albert's Fishing Tackle":
   market_price: 800000
