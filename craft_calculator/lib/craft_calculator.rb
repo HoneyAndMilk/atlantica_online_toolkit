@@ -41,6 +41,14 @@ module AtlanticaOnline
         all.values
       end
 
+      def self.ordered_items
+        items.sort_by { |i| i.name_for_sort }
+      end
+
+      def self.ordered_craftable_items
+        ordered_items.select{ |i| i.craftable? }
+      end
+
       def self.remove_leftovers_from_lists(craft_list, shopping_list, leftovers)
         leftovers.each do |leftover|
           if leftover.more_than_batch? && (cl_item = craft_list.detect { |i| i.name == leftover.name })
@@ -88,6 +96,10 @@ module AtlanticaOnline
         define_method method_name do
           @data[method_name.to_s]
         end
+      end
+
+      def name_for_sort
+        name.gsub("[I]", "1").gsub("[II]", "2").gsub("[III]", "3").gsub("[IV]", "4").gsub("[V]", "5")
       end
 
       def batch_size
