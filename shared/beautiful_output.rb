@@ -41,7 +41,7 @@ def format_time(seconds)
 end
 
 def print_item_with_raw_craft_tree(item, level = 0)
-  puts "#{" " * (level * 2)} #{item.name} - required: #{item.count}, crafted/purchased: #{item.crafted_count}"
+  puts "#{" " * (level * 2)} #{item.name} - required: #{item.count}, crafted/purchased: #{item.crafted_count}, price type: #{item.price_type}"
   item.ingredients_craft_tree.each do |i|
     print_item_with_raw_craft_tree(i, level + 1)
   end
