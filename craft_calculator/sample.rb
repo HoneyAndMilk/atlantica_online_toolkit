@@ -96,6 +96,12 @@ report "Print shopping list, craft list, total workload and total price" do
   end
 end
 
+report "Ingredients - prices" do
+  AtlanticaOnline::CraftCalculator::Item.ordered_ingredient_items.each do |ingredient|
+    puts "#{item(ingredient.name)}: #{gold(ingredient.unit_price)} (#{ingredient.price_type})"
+  end
+end
+
 report "Print prices using fixed price, then using custom market price" do
   item_names = ["Ashen Crystal", "Ashen Jewel", "Multi-Hued Jewel"]
 
