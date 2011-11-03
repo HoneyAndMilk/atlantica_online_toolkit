@@ -367,6 +367,146 @@
   <<: *armor_lvl_97
   skill_lvl: 68
 
+"Freezing Heavy Armor": &armor_lvl_100
+  ingredients:
+    "Colorful Fabric": 35
+    "Adamantium Ingot": 10
+    "Large Animal Bone": 50
+    "Sea Element": 50
+    "Energy of Wind": 10
+    "Energy of Hail": 10
+    "Opal": 20
+    "Ruby": 8
+    "Tanzanite": 10
+    "Crazy Lord's Seal": 2
+    "Frozen Soul": 30
+    "Platinum Ingot": 45
+  workload: 13500000
+  skill: "Armor"
+  skill_lvl: 78
+
+"Freezing Light Armor":
+  <<: *armor_lvl_100
+  skill_lvl: 76
+
+"Freezing Robe":
+  <<: *armor_lvl_100
+  skill_lvl: 74
+
+"Divine Heavy Armor": &armor_lvl_105
+  ingredients:
+    "Gorgeous Colorful Fabric": 13
+    "Imitation Oriharukon": 1
+    "Adamantium Ingot": 5
+    "Opal": 45
+    "Animal Replica": 2
+    "Sea Element": 160
+    "Energy of Sky": 10
+    "Ruby": 100
+  workload: 20000000
+  skill: "Armor"
+  skill_lvl: 84
+
+"Divine Light Armor":
+  <<: *armor_lvl_105
+  skill_lvl: 82
+
+"Divine Robe":
+  <<: *armor_lvl_105
+  skill_lvl: 80
+
+"Depraved Heavy Armor": &armor_lvl_110
+  ingredients:
+    "Gorgeous Colorful Fabric": 7
+    "Imitation Oriharukon": 1
+    "Animal Replica": 3
+    "Sea Element": 280
+    "Revival Plant": 30
+    "Hero's Blood": 3
+    "Depraved Seed": 2
+    "Platinum Ingot": 20
+    "Opal": 200
+  workload: 30000000
+  skill: "Armor"
+  skill_lvl: 90
+
+"Depraved Light Armor":
+  <<: *armor_lvl_110
+  skill_lvl: 88
+
+"Depraved Robe":
+  <<: *armor_lvl_110
+  skill_lvl: 86
+
+"Phoenix's Heavy Armor": &armor_lvl_113
+  ingredients:
+    "Gorgeous Colorful Fabric": 15
+    "Imitation Oriharukon": 1
+    "Refined Mithril Ingot": 1
+    "Alchemist's Stone": 1
+    "Enriched Adamantium Ingot": 1
+    "Flame Element": 200
+    "Animal Replica": 5
+    "Oriental Mushroom": 100
+    "Phoenix's Feather": 8
+  workload: 45000000
+  skill: "Armor"
+  skill_lvl: 96
+
+"Phoenix's Light Armor":
+  <<: *armor_lvl_113
+  skill_lvl: 94
+
+"Phoenix's Robe":
+  <<: *armor_lvl_113
+  skill_lvl: 92
+
+"Dragon God's Heavy Armor": &armor_lvl_121
+  ingredients:
+    "Gorgeous Colorful Fabric": 30
+    "Dragon God's Wishstone": 8
+    "Enriched Adamantium Ingot": 1
+    "Titanium Ingot": 50
+    "Flame Element": 380
+    "Animal Replica": 25
+    "Oriental Mushroom": 90
+    "Dragon God's Ire": 50
+    "Weapon & Armor Mold": 50
+  workload: 67500000
+  skill: "Armor"
+  skill_lvl: 110
+
+"Dragon God's Light Armor":
+  <<: *armor_lvl_121
+  skill_lvl: 108
+
+"Dragon God's Robe":
+  <<: *armor_lvl_121
+  skill_lvl: 106
+
+"Evil Heavy Armor": &armor_lvl_130
+  ingredients:
+    "Evil Imprint": 15
+    "Vindictive Soul Imprint": 150
+    "Storm Element": 250
+    "Atlantis Silver Coin": 10
+    "Craftsman's Soul": 100
+    "Imitation Oriharukon": 3
+    "Alchemist's Stone": 1
+    "Monster Egg": 600
+    "Evil Soul Extract": 500
+  workload: 135000000
+  skill: "Armor"
+  skill_lvl: 120
+
+"Evil Light Armor":
+  <<: *armor_lvl_130
+  skill_lvl: 118
+
+"Evil Robe":
+  <<: *armor_lvl_130
+  skill_lvl: 116
+
 # Arrow
 
 "Wooden Arrow":
