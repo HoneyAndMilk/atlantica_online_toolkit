@@ -2323,7 +2323,14 @@
   fixed_price: 3000
 
 "Adamantium":
-  market_price: 100000
+  ingredients:
+    "Ruby": 4
+    "Gold Ingot": 40
+    "Oil": 50
+  batch_size: 2
+  workload: 48000
+  skill: "Tool"
+  skill_lvl: 26
 
 "Adamantium Ingot":
   ingredients:
@@ -3855,6 +3862,29 @@
   skill: "Tool"
   skill_lvl: 1
 
+"Weak Dynamite":
+  ingredients:
+    "Pearl": 300
+    "Pine": 200
+    "Coral": 300
+    "Weak Gunpowder": 100
+  batch_size: 10
+  workload: 12100
+  skill: "Tool"
+  skill_lvl: 10
+
+"Normal Dynamite":
+  ingredients:
+    "Pearl": 300
+    "Ruby": 50
+    "Pine": 200
+    "Coral": 500
+    "Common Gunpowder": 50
+  batch_size: 10
+  workload: 140000
+  skill: "Tool"
+  skill_lvl: 25
+
 "Small Lever":
   ingredients:
     "Slab of Lumber": 30
@@ -3865,6 +3895,9 @@
   workload: 15450
   skill: "Tool"
   skill_lvl: 15
+
+"Vulcan's Hammer":
+  market_price: 30000
 
 "Animal Replica":
   ingredients:
