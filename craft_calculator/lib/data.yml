@@ -369,9 +369,116 @@
 
 # Arrow
 
+"Wooden Arrow":
+  ingredients:
+    "Maple": 4
+    "Weak Gunpowder": 4
+    "Thread": 4
+    "Earth Element Shard": 4
+  batch_size: 30
+  workload: 150
+  skill: "Arrow"
+  skill_lvl: 1
+
+"Bronze Arrow":
+  ingredients:
+    "Coral": 20
+    "Iron Sand": 20
+    "Weak Gunpowder": 10
+    "Embroidery Thread": 10
+    "Earth Element Shard": 10
+  batch_size: 100
+  workload: 1000
+  skill: "Arrow"
+  skill_lvl: 5
+
+"Silver Arrow":
+  ingredients:
+    "Silver Ingot": 10
+    "Weak Gunpowder": 20
+    "Silver Thread": 5
+    "Sea Element Shard": 5
+  batch_size: 100
+  workload: 2700
+  skill: "Arrow"
+  skill_lvl: 10
+
+"Mithril Arrow":
+  ingredients:
+    "Opal": 2
+    "Silver Ingot": 5
+    "Gold Ingot": 3
+    "Weak Gunpowder": 100
+    "Silver Thread": 5
+    "Flame Element Shard": 5
+  batch_size: 200
+  workload: 12500
+  skill: "Arrow"
+  skill_lvl: 15
+
+"Adamantium Arrow":
+  ingredients:
+    "Ruby": 2
+    "Platinum Ingot": 20
+    "Weak Gunpowder": 200
+    "Gold Thread": 5
+    "Mysterious Vial: Valor": 1
+    "Flame Element Shard": 10
+  batch_size: 300
+  workload: 45000
+  skill: "Arrow"
+  skill_lvl: 25
+
+"Enriched Adamantium Arrow":
+  ingredients:
+    "Adamantium": 5
+    "Platinum Ingot": 50
+    "Common Gunpowder": 100
+    "Colorful Thread": 5
+    "Mysterious Vial: Death": 1
+    "Storm Element Shard": 10
+    "Revival Plant": 10
+  batch_size: 400
+  workload: 169000
+  skill: "Arrow"
+  skill_lvl: 30
+
+"Poisonous Arrow":
+  ingredients:
+    "Enriched Adamantium Arrow": 500
+    "Hydra's Poisonous Gland": 1
+  batch_size: 500
+  workload: 2000000
+  skill: "Arrow"
+  skill_lvl: 35
+
+"Screaming Arrow":
+  ingredients:
+    "Enriched Adamantium Arrow": 300
+    "Crystal of Temptation": 1
+  batch_size: 300
+  workload: 2500000
+  skill: "Arrow"
+  skill_lvl: 40
+
+"Titanium Arrow":
+  ingredients:
+    "Titanium Ore": 20
+    "Platinum Ingot": 100
+    "Common Gunpowder": 200
+    "Colorful Thread": 10
+    "Mysterious Vial: Death": 2
+    "Sea Element": 50
+    "Revival Plant": 10
+  batch_size: 400
+  workload: 1100000
+  skill: "Arrow"
+  skill_lvl: 45
+
 # Axe
 
 "Spirit Axe": &weapon_lvl_1
+  fixed_price: 900
   ingredients:
     "Coral": 5
     "Maple": 4
@@ -380,6 +487,7 @@
   skill_lvl: 1
 
 "Ocean Axe": &weapon_lvl_15
+  fixed_price: 4800
   ingredients:
     "Coral": 2
     "Pearl": 7
@@ -390,6 +498,7 @@
   skill_lvl: 4
 
 "Rakshasa's Axe": &weapon_lvl_25
+  fixed_price: 13700
   ingredients:
     "Pine": 3
     "Iron Sand": 5
@@ -403,6 +512,7 @@
   skill_lvl: 9
 
 "Destroyer's Axe": &weapon_lvl_35
+  fixed_price: 41100
   ingredients:
     "Silver Ingot": 9
     "Copper Ore": 25
@@ -745,6 +855,106 @@
 
 # Bullet
 
+"Lead Bullet":
+  ingredients:
+    "Iron Sand": 4
+    "Weak Gunpowder": 4
+    "Earth Element Shard": 5
+  batch_size: 30
+  workload: 150
+  skill: "Bullet"
+  skill_lvl: 1
+
+"Copper Bullet":
+  ingredients:
+    "Iron Sand": 20
+    "Coral": 30
+    "Weak Gunpowder": 30
+    "Earth Element Shard": 10
+  batch_size: 100
+  workload: 1000
+  skill: "Bullet"
+  skill_lvl: 5
+
+"Iron-clad Bullet":
+  ingredients:
+    "Silver Ingot": 5
+    "Copper Ore": 20
+    "Weak Gunpowder": 40
+    "Sea Element Shard": 5
+  batch_size: 100
+  workload: 2700
+  skill: "Bullet"
+  skill_lvl: 10
+
+"Enriched Bullet":
+  ingredients:
+    "Tanzanite": 4
+    "Opal": 2
+    "Pearl": 3
+    "Weak Gunpowder": 20
+    "Flame Element Shard": 3
+  batch_size: 200
+  workload: 12500
+  skill: "Bullet"
+  skill_lvl: 15
+
+"Adamantium Bullet":
+  ingredients:
+    "Ruby": 2
+    "Platinum Ingot": 20
+    "Weak Gunpowder": 200
+    "Mysterious Vial: Valor": 1
+    "Flame Element Shard": 10
+  batch_size: 300
+  workload: 45000
+  skill: "Bullet"
+  skill_lvl: 25
+
+"Enriched Adamantium Bullet":
+  ingredients:
+    "Adamantium": 5
+    "Platinum Ingot": 80
+    "Common Gunpowder": 50
+    "Mysterious Vial: Death": 1
+    "Storm Element Shard": 10
+    "Revival Plant": 10
+  batch_size: 400
+  workload: 169000
+  skill: "Bullet"
+  skill_lvl: 30
+
+"Poisonous Bullet":
+  ingredients:
+    "Enriched Adamantium Bullet": 500
+    "Hydra's Poisonous Gland": 1
+  batch_size: 500
+  workload: 2000000
+  skill: "Bullet"
+  skill_lvl: 35
+
+"Screaming Bullet":
+  ingredients:
+    "Enriched Adamantium Bullet": 300
+    "Crystal of Temptation": 1
+  batch_size: 300
+  workload: 2500000
+  skill: "Bullet"
+  skill_lvl: 40
+
+"Titanium Bullet":
+  ingredients:
+    "Titanium Ore": 20
+    "Platinum Ingot": 20
+    "Common Gunpowder": 100
+    "Mysterious Vial: Death": 2
+    "Sea Element": 50
+    "Revival Plant": 20
+  batch_size: 400
+  workload: 1150000
+  skill: "Bullet"
+  skill_lvl: 45
+
 # Cannon
 
 "Spirit Cannon":
@@ -824,6 +1034,109 @@
   skill: "Cannon"
 
 # Cannonball
+
+"Steel Cannonball":
+  ingredients:
+    "Iron Sand": 7
+    "Weak Gunpowder": 3
+    "Earth Element Shard": 3
+  batch_size: 30
+  workload: 150
+  skill: "Cannonball"
+  skill_lvl: 1
+
+"Iron-clad Cannonball":
+  ingredients:
+    "Silver Ingot": 7
+    "Weak Gunpowder": 10
+    "Iron Sand": 10
+    "Earth Element Shard": 10
+  batch_size: 100
+  workload: 1000
+  skill: "Cannonball"
+  skill_lvl: 5
+
+"Flame Cannonball":
+  ingredients:
+    "Pearl": 20
+    "Gold Ingot": 3
+    "Weak Gunpowder": 10
+    "Sea Element Shard": 5
+  batch_size: 100
+  workload: 2700
+  skill: "Cannonball"
+  skill_lvl: 10
+
+"Explosive Cannonball":
+  ingredients:
+    "Platinum Ingot": 10
+    "Opal": 2
+    "Weak Gunpowder": 50
+    "Silver Ingot": 5
+    "Flame Element Shard": 3
+  batch_size: 200
+  workload: 12500
+  skill: "Cannonball"
+  skill_lvl: 15
+
+"Adamantium Cannonball":
+  ingredients:
+    "Ruby": 2
+    "Platinum Ingot": 20
+    "Weak Gunpowder": 200
+    "Silver Ingot": 100
+    "Mysterious Vial: Valor": 1
+    "Flame Element Shard": 10
+  batch_size: 300
+  workload: 45000
+  skill: "Cannonball"
+  skill_lvl: 25
+
+"Enriched Adamantium Cannonball":
+  ingredients:
+    "Adamantium": 5
+    "Platinum Ingot": 50
+    "Common Gunpowder": 50
+    "Silver Ingot": 200
+    "Mysterious Vial: Death": 1
+    "Storm Element Shard": 10
+    "Revival Plant": 10
+  batch_size: 400
+  workload: 169000
+  skill: "Cannonball"
+  skill_lvl: 30
+
+"Poisonous Cannonball":
+  ingredients:
+    "Enriched Adamantium Cannonball": 500
+    "Hydra's Poisonous Gland": 1
+  batch_size: 500
+  workload: 2000000
+  skill: "Cannonball"
+  skill_lvl: 35
+
+"Screaming Cannonball":
+  ingredients:
+    "Enriched Adamantium Cannonball": 300
+    "Crystal of Temptation": 1
+  batch_size: 300
+  workload: 2500000
+  skill: "Cannonball"
+  skill_lvl: 40
+
+"Titanium Cannonball":
+  ingredients:
+    "Titanium Ore": 20
+    "Platinum Ingot": 100
+    "Common Gunpowder": 100
+    "Silver Ingot": 200
+    "Mysterious Vial: Death": 2
+    "Sea Element": 55
+    "Revival Plant": 10
+  batch_size: 400
+  workload: 1200000
+  skill: "Cannonball"
+  skill_lvl: 45
 
 # Charm
 
@@ -2210,6 +2523,7 @@
 # Orb
 
 "Spirit Orb":
+  fixed_price: 900
   ingredients:
     "Coral": 5
     "Maple": 4
@@ -2218,6 +2532,7 @@
   skill_lvl: 1
 
 "Red Soul Orb":
+  fixed_price: 4600
   ingredients:
     "Coral": 2
     "Pearl": 7
@@ -2228,6 +2543,7 @@
   skill_lvl: 4
 
 "Krishna's Orb":
+  fixed_price: 12900
   ingredients:
     "Pine": 3
     "Iron Sand": 5
@@ -2241,6 +2557,7 @@
   skill_lvl: 8
 
 "Savior's Orb":
+  fixed_price: 34100
   ingredients:
     "Silver Ingot": 9
     "Copper Ore": 15
@@ -2728,6 +3045,7 @@
 # Shield
 
 "Spirit Shield":
+  fixed_price: 900
   ingredients:
     "Coral": 5
     "Maple": 4
@@ -2736,6 +3054,7 @@
   skill_lvl: 1
 
 "Ocean Shield":
+  fixed_price: 4600
   ingredients:
     "Coral": 2
     "Pearl": 7
@@ -2746,6 +3065,7 @@
   skill_lvl: 4
 
 "Rakshasa's Shield":
+  fixed_price: 12900
   ingredients:
     "Pine": 3
     "Iron Sand": 5
@@ -2759,6 +3079,7 @@
   skill_lvl: 8
 
 "Destroyer's Shield":
+  fixed_price: 35600
   ingredients:
     "Silver Ingot": 9
     "Copper Ore": 15
