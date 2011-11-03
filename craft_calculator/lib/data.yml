@@ -1871,7 +1871,19 @@
 "Potato":
   fixed_price: 100
 
+"Lemon":
+  fixed_price: 5000
+
 "Cucumber":
+  fixed_price: 100
+
+"Carrot":
+  fixed_price: 100
+
+"Garlic":
+  fixed_price: 200
+
+"Bean":
   fixed_price: 100
 
 "Wheat":
@@ -1883,6 +1895,12 @@
 "Beef":
   fixed_price: 300
 
+"Mutton":
+  fixed_price: 500
+
+"Chicken":
+  fixed_price: 300
+
 "Honey":
   fixed_price: 100
 
@@ -1892,10 +1910,20 @@
 "Salt":
   fixed_price: 100
 
+"Bay Salt":
+  fixed_price: 3000
+
 "Carp":
   fixed_price: 300
 
+"Octopus":
+  fixed_price: 100
+
+"Shrimp":
+  fixed_price: 100
+
 "Dumpling":
+  fixed_price: 1000
   ingredients:
     "Pork": 4
     "Wheat": 6
@@ -1905,6 +1933,7 @@
   skill_lvl: 1
 
 "Grilled Pork":
+  fixed_price: 1200
   ingredients:
     "Pork": 8
     "Salt": 4
@@ -1913,11 +1942,173 @@
   skill: "Food"
   skill_lvl: 2
 
+"Grilled Shrimp":
+  ingredients:
+    "Shrimp": 10
+    "Salt": 5
+  batch_size: 10
+  workload: 800
+  skill: "Food"
+  skill_lvl: 4
+
+"Octopus Soup":
+  ingredients:
+    "Octopus": 12
+    "Salt": 6
+  batch_size: 10
+  workload: 960
+  skill: "Food"
+  skill_lvl: 5
+
+"Tandoori":
+  ingredients:
+    "Chicken": 7
+    "Garlic": 4
+  batch_size: 10
+  workload: 1280
+  skill: "Food"
+  skill_lvl: 7
+
+"Thali":
+  ingredients:
+    "Potato": 17
+    "Garlic": 5
+  batch_size: 10
+  workload: 1540
+  skill: "Food"
+  skill_lvl: 10
+
+"Stew":
+  ingredients:
+    "Beef": 5
+    "Potato": 10
+    "Carrot": 10
+  batch_size: 10
+  workload: 2050
+  skill: "Food"
+  skill_lvl: 13
+
+"Roasted Mushroom":
+  ingredients:
+    "Mushroom": 10
+    "Bean": 8
+    "Honey": 7
+    "Garlic": 3
+  batch_size: 10
+  workload: 2460
+  skill: "Food"
+  skill_lvl: 16
+
+"Steak":
+  ingredients:
+    "Beef": 10
+    "Garlic": 5
+    "Bean": 12
+  batch_size: 10
+  workload: 3280
+  skill: "Food"
+  skill_lvl: 20
+
+"Roasted Mutton":
+  ingredients:
+    "Mutton": 10
+    "Carrot": 6
+    "Jasmine": 3
+  batch_size: 10
+  workload: 3940
+  skill: "Food"
+  skill_lvl: 25
+
+"Barley Bibimbap":
+  ingredients:
+    "Barley": 60
+    "Salt": 20
+    "Sesame Oil": 5
+  batch_size: 10
+  workload: 7000
+  skill: "Food"
+  skill_lvl: 33
+
+"Simmered Carp":
+  ingredients:
+    "Carp": 20
+    "Cucumber": 40
+    "Sesame Oil": 5
+  batch_size: 10
+  workload: 8800
+  skill: "Food"
+  skill_lvl: 40
+
+"Traditional Korean Meal":
+  ingredients:
+    "Barley Bibimbap": 15
+    "Bay Salt": 10
+    "Beef": 10
+    "Pork": 10
+  batch_size: 10
+  workload: 29000
+  skill: "Food"
+  skill_lvl: 50
+
+"Seafood Pot":
+  ingredients:
+    "Simmered Carp": 15
+    "Bay Salt": 10
+    "Octopus": 25
+    "Shrimp": 25
+  batch_size: 10
+  workload: 33000
+  skill: "Food"
+  skill_lvl: 60
+
 "Oriental Mushroom":
   fixed_price: 80000
 
+"Tai Hua Gong's Special Dimsum":
+  ingredients:
+    "Wheat": 10
+    "Shrimp": 10
+    "Carrot": 5
+    "Bean": 10
+    "Barley": 5
+    "Tai Hua Gong's Special Sauce": 1
+  batch_size: 10
+  workload: 1540
+  skill: "Food"
+  skill_lvl: 10
+
+"Tai Hua Gong's Special Sauce":
+  market_price: 3600
+
 "Monster Egg":
   fixed_price: 10000
+
+"[Common] Afternoon Tea Party":
+  ingredients:
+    "Sea Element": 50
+    "Mint": 100
+    "Brown Rice": 100
+  workload: 10000000
+  skill: "Food"
+  skill_lvl: 10
+
+"[Common] Sushi Feast":
+  ingredients:
+    "Flame Element": 50
+    "Quality Magnetite": 50
+    "Quality Ginkgo Wood": 50
+  workload: 12500000
+  skill: "Food"
+  skill_lvl: 20
+
+"[Common] Royal Supper Feast":
+  ingredients:
+    "Flame Element": 70
+    "Quality Brown Rice": 70
+    "Quality Mint": 70
+  workload: 15000000
+  skill: "Food"
+  skill_lvl: 30
 
 # Gauntlet
 
@@ -2617,6 +2808,54 @@
 
 "Heavenly Crystal":
   market_price: 5500000
+
+"Mint":
+  fixed_price: 12000
+
+"Quality Mint":
+  fixed_price: 200000
+
+"Rare Mint":
+  market_price: 90000
+
+"Precious Mint":
+  market_price: 280000
+
+"Magnetite":
+  fixed_price: 12000
+
+"Quality Magnetite":
+  fixed_price: 200000
+
+"Rare Magnetite":
+  market_price: 360000
+
+"Precious Magnetite":
+  market_price: 240000
+
+"Ginkgo Wood":
+  fixed_price: 12000
+
+"Quality Ginkgo Wood":
+  fixed_price: 200000
+
+"Rare Ginkgo Wood":
+  market_price: 20000
+
+"Precious Ginkgo Wood":
+  market_price: 400000
+
+"Brown Rice":
+  fixed_price: 12000
+
+"Quality Brown Rice":
+  fixed_price: 200000
+
+"Rare Brown Rice":
+  market_price: 5000
+
+"Precious Brown Rice":
+  market_price: 390000
 
 "Craftsman's Soul":
   fixed_price: 300000
